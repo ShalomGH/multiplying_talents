@@ -1,26 +1,16 @@
+# This Python file uses the following encoding: utf-8
+import os
+from pathlib import Path
 import sys
-from PyQt5.QtWidgets import QWidget, QToolTip, QPushButton, QApplication, QMainWindow
-from PyQt5.QtGui import QFont
+
+from PySide6.QtGui import QGuiApplication
+from PySide6.QtQml import QQmlApplicationEngine
 
 
-class Window(QMainWindow):
-    def __init__(self):
-        super(Window, self).__init__()
-
-        self.setWindowTitle("Programm")
-        self.setGeometry(200, 200, 480, 320)
-
-    def switch(self):
-        print("lol")
-
-
-def application():
-    app = QApplication(sys.argv)
-    window = Window()
-
-    window.show()
-    sys.exit(app.exec_())
-
-
-if __name__ == '__main__':
-    application()
+if __name__ == "__main__":
+    app = QGuiApplication(sys.argv)
+    engine = QQmlApplicationEngine()
+    engine.load(os.fspath(Path(__file__).resolve().parent / "UI/main.qml"))
+    if not engine.rootObjects():
+        sys.exit(-1)
+    sys.exit(app.exec())

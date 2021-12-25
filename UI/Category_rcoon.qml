@@ -36,12 +36,21 @@ Rectangle {
             Layout.column: 0
             Layout.row: 0
 
-            text: qsTr("E")
+            text: qsTr("E ")
+            horizontalAlignment: Text.AlignRight
+            verticalAlignment: Text.AlignVCenter
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
+//            Layout.fillWidth: true
         }
 
-        ComboBox {
+        Little_combo {
             id: e_category
-            width: 100
+//            width: 100
+//            Layout.maximumWidth: 75
+//            Layout.fillWidth: parent * 0.167
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
 
             Layout.column: 1
             Layout.row: 0
@@ -55,14 +64,23 @@ Rectangle {
 
             Layout.column: 2
             Layout.row: 0
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            text: qsTr("F")
+
+            text: qsTr("F ")
+            horizontalAlignment: Text.AlignRight
+            verticalAlignment: Text.AlignVCenter
+            Layout.fillWidth: true
         }
 
-        ComboBox {
+        Little_combo {
             id: f_category
 
-            width: 100
+//            width: 100
+//            Layout.maximumWidth: 75
+            width: parent * 0.567
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
 
             Layout.column: 3
             Layout.row: 0
@@ -76,13 +94,20 @@ Rectangle {
 
             Layout.column: 4
             Layout.row: 0
-            text: qsTr("G")
+            text: qsTr("G ")
+            horizontalAlignment: Text.AlignRight
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
         }
 
-        ComboBox {
+        Little_combo {
             id: g_category
 
-            width: 100
+//            width: 100
+//            Layout.maximumWidth: 75
+//            Layout.fillWidth: parent * 0.167
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
 
             Layout.column: 5
             Layout.row: 0
@@ -91,31 +116,26 @@ Rectangle {
 
         }
 
-//        Rectangle {
-//            id: input_value_rect
 
-//            color: "#ffffff"
-//            border.width: 0
-//            visible: true
-
-//            Layout.column: 2
-//            Layout.row: 2
-//            Layout.columnSpan: 2
-//            border.width: 2
-//            Layout.alignment: Qt.AlignHCenter
-//            Layout.fillWidth: true
-
-            TextInput {
+            Text_field_my {
                 id: input_value
                 visible: true
 
-                text: "value"
-                maximumLength: 14
+                placeholderText: "value"
+
+                Layout.fillWidth: true
+                cursorVisible: false
+                //                maximumLength: 14
                 selectByMouse: true
                 activeFocusOnTab: true
                 focus: true
+//                border.color: "#000000"
+                background: Rectangle {
+                    color: "#ffffff"
+                    border.color: "#000000"
+                }
 
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
 
 
                 Layout.column: 2

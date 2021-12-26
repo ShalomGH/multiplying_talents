@@ -8,8 +8,6 @@ Rectangle {
     id: m_rectangle
     anchors.fill: parent
 
-    visible: true
-
     color: "#903475"
 
     Material.theme: Material.System
@@ -17,16 +15,18 @@ Rectangle {
 
     GridLayout {
         id: main_grid
+
         anchors.fill: parent
         anchors.margins: 10
-        columnSpacing: 0
+
 
         columns: 3
         rows: 3
 
+
         ComboBox {
             id: from_sdt
-            Layout.leftMargin: 10
+
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
             Layout.minimumWidth: main_grid.width * 0.3
@@ -52,14 +52,13 @@ Rectangle {
             model: ["RF-2013", "SPE-PRMS", "SEC", "РКООН"]
         }
 
-        Standart_rcoon {
-            visible: true
-        }
+        Standart_rcoon {}
 
         Standart_rf_2013_output {}
 
         Button {
             id: button
+
             text: qsTr("Translate")
 
             Layout.column: 1

@@ -6,9 +6,10 @@ import QtQuick.Controls.Material 2.3
 
 Rectangle {
     id: rf_2013_output_ctgr
+
     visible: true
     color: "#d09bc0"
-    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
     Layout.fillHeight: true
     Layout.fillWidth: true
 
@@ -29,15 +30,14 @@ Rectangle {
     Pane {
         id: rect2
 
-        anchors.left: alpf_num.right
-        anchors.leftMargin: 5
-
         width: rf_2013_output_ctgr.width * 0.69
         height: rf_2013_output_ctgr.height
 
-        background: Rectangle {
-            color: "#eeeeee"
-        }
+        anchors.left: alpf_num.right
+        anchors.leftMargin: 4
+
+        background: Rectangle {color: "#eeeeee"}
+
         Label {
             text: qsTr("Content")
             anchors.centerIn: parent
@@ -46,7 +46,7 @@ Rectangle {
 }
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:1}D{i:4}D{i:2}
+    D{i:0;autoSize:true;height:480;width:640}D{i:3}D{i:1}D{i:6}D{i:4}
 }
 ##^##*/
 

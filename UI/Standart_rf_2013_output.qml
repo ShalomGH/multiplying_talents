@@ -6,13 +6,15 @@ import QtQuick.Controls.Material 2.3
 
 Rectangle {
     id: rf_2013_output_stand
+
     visible: true
     color: "#d09bc0"
+
     Layout.rightMargin: 4
     Layout.bottomMargin: 4
     Layout.leftMargin: 4
     Layout.topMargin: 4
-    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
     Layout.fillHeight: true
     Layout.fillWidth: true
 

@@ -6,128 +6,109 @@ import QtQuick.Controls.Material 2.3
 
 Rectangle {
     id: in1
-    visible: true
     color: "#d09bc0"
-    Layout.rightMargin: 4
-    Layout.bottomMargin: 4
-    Layout.leftMargin: 4
-    Layout.topMargin: 4
-    Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
     Layout.fillHeight: true
     Layout.fillWidth: true
-
-
+    border.width: 1
 
     GridLayout {
         id: in1_grid
+
+        anchors.margins: 4
         anchors.fill: parent
-        anchors.margins: 2
-        columnSpacing: 0
 
         columns: 8
         rows: 2
 
-
-
         Text {
             id: e1
 
+            text: qsTr("E ")
+
             Layout.column: 0
             Layout.row: 0
-
-            text: qsTr("E ")
+            Layout.fillWidth: true
             horizontalAlignment: Text.AlignRight
             verticalAlignment: Text.AlignVCenter
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
 
         ComboBox {
             id: e_category
 
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            model: ["1", "1.1", "1.2", "2", "3.1", "3.2", "3.3"]
+
             Layout.column: 1
             Layout.row: 0
             Layout.columnSpan: 2
-
-            model: ["1", "1.1", "1.2", "2", "3.1", "3.2", "3.3"]
-
         }
 
         Text {
             id: f1
 
+            text: qsTr("F ")
+
             Layout.column: 3
             Layout.row: 0
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-
-            text: qsTr("F ")
+            Layout.fillWidth: true
             horizontalAlignment: Text.AlignRight
             verticalAlignment: Text.AlignVCenter
-            Layout.fillWidth: true
         }
 
         ComboBox {
             id: f_category
 
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            model: ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "4"]
 
             Layout.column: 4
             Layout.row: 0
             Layout.columnSpan: 2
-            model: ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "4"]
-
         }
 
         Text {
             id: g1
 
+            text: qsTr("G ")
+
             Layout.column: 6
             Layout.row: 0
-            text: qsTr("G ")
-            horizontalAlignment: Text.AlignRight
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.fillWidth: true
+            horizontalAlignment: Text.AlignRight
+            verticalAlignment: Text.AlignVCenter
         }
 
         ComboBox {
             id: g_category
 
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            model: ["1", "2-3", "4", "4.1", "4.2", "4.3"]
 
             Layout.column: 7
             Layout.row: 0
             Layout.columnSpan: 2
-
-            model: ["1", "2-3", "4", "4.1", "4.2", "4.3"]
-
         }
 
 
-            Text_field_my {
-                id: input_value
-                visible: true
+        Text_field_my {
+            id: input_value
 
-                validator: IntValidator {bottom: 1; top: 999999999;}
-                placeholderText: "value"
+            validator: IntValidator {bottom: 1; top: 999999999;}
 
-                Layout.fillWidth: true
-                cursorVisible: false
-                selectByMouse: true
-                activeFocusOnTab: true
-                focus: true
+            selectByMouse: true
+            activeFocusOnTab: true
+            focus: true
 
-                background: Rectangle {
-                    color: "#ffffff"
-                    border.color: "#000000"
-                }
+            placeholderText: "value"
 
-                Layout.column: 3
-                Layout.row: 2
-                Layout.columnSpan: 4
-
+            background: Rectangle {
+                color: "#ffffff"
+                border.color: "#000000"
             }
 
+            Layout.fillWidth: true
+            Layout.column: 3
+            Layout.row: 2
+            Layout.columnSpan: 4
+        }
     }
 }
 

@@ -24,7 +24,7 @@ Rectangle {
         anchors.margins: 2
         columnSpacing: 0
 
-        columns: 6
+        columns: 8
         rows: 2
 
 
@@ -41,12 +41,13 @@ Rectangle {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         }
 
-        Little_combo {
+        ComboBox {
             id: e_category
 
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.column: 1
             Layout.row: 0
+            Layout.columnSpan: 2
 
             model: ["1", "1.1", "1.2", "2", "3.1", "3.2", "3.3"]
 
@@ -55,7 +56,7 @@ Rectangle {
         Text {
             id: f1
 
-            Layout.column: 2
+            Layout.column: 3
             Layout.row: 0
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
@@ -66,14 +67,14 @@ Rectangle {
             Layout.fillWidth: true
         }
 
-        Little_combo {
+        ComboBox {
             id: f_category
 
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            Layout.column: 3
+            Layout.column: 4
             Layout.row: 0
-
+            Layout.columnSpan: 2
             model: ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "4"]
 
         }
@@ -81,7 +82,7 @@ Rectangle {
         Text {
             id: g1
 
-            Layout.column: 4
+            Layout.column: 6
             Layout.row: 0
             text: qsTr("G ")
             horizontalAlignment: Text.AlignRight
@@ -89,13 +90,14 @@ Rectangle {
             Layout.fillWidth: true
         }
 
-        Little_combo {
+        ComboBox {
             id: g_category
 
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
-            Layout.column: 5
+            Layout.column: 7
             Layout.row: 0
+            Layout.columnSpan: 2
 
             model: ["1", "2-3", "4", "4.1", "4.2", "4.3"]
 
@@ -120,9 +122,9 @@ Rectangle {
                     border.color: "#000000"
                 }
 
-                Layout.column: 2
+                Layout.column: 3
                 Layout.row: 2
-                Layout.columnSpan: 3
+                Layout.columnSpan: 4
 
             }
 

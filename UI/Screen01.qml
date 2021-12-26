@@ -56,31 +56,12 @@ Rectangle {
             visible: true
         }
 
-        Rectangle {
-            id: out_rect
-            visible: true
-            color: "#997e91"
-            Layout.rightMargin: 8
-            Layout.bottomMargin: 4
-            Layout.leftMargin: 8
-            Layout.topMargin: 4
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            Layout.column: 2
-            Layout.row: 1
-            Layout.columnSpan: 1
-            Layout.rowSpan: 2
-        }
+        Standart_rf_2013_output {}
 
         Button {
             id: button
             text: qsTr("Translate")
-            Layout.bottomMargin: 24
-            Layout.topMargin: 0
 
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
             Layout.column: 1
             Layout.row: 2
             Layout.columnSpan: 1

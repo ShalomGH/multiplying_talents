@@ -22,7 +22,6 @@ Rectangle {
         id: in1_grid
         anchors.fill: parent
         anchors.margins: 2
-        focus: true
         columnSpacing: 0
 
         columns: 6
@@ -40,18 +39,12 @@ Rectangle {
             horizontalAlignment: Text.AlignRight
             verticalAlignment: Text.AlignVCenter
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-//            Layout.fillWidth: true
         }
 
         Little_combo {
             id: e_category
-//            width: 100
-//            Layout.maximumWidth: 75
-//            Layout.fillWidth: parent * 0.167
+
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-
             Layout.column: 1
             Layout.row: 0
 
@@ -76,11 +69,7 @@ Rectangle {
         Little_combo {
             id: f_category
 
-//            width: 100
-//            Layout.maximumWidth: 75
-            width: parent * 0.567
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
 
             Layout.column: 3
             Layout.row: 0
@@ -103,11 +92,7 @@ Rectangle {
         Little_combo {
             id: g_category
 
-//            width: 100
-//            Layout.maximumWidth: 75
-//            Layout.fillWidth: parent * 0.167
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
 
             Layout.column: 5
             Layout.row: 0
@@ -121,22 +106,19 @@ Rectangle {
                 id: input_value
                 visible: true
 
+                validator: IntValidator {bottom: 1; top: 999999999;}
                 placeholderText: "value"
 
                 Layout.fillWidth: true
                 cursorVisible: false
-                //                maximumLength: 14
                 selectByMouse: true
                 activeFocusOnTab: true
                 focus: true
-//                border.color: "#000000"
+
                 background: Rectangle {
                     color: "#ffffff"
                     border.color: "#000000"
                 }
-
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-
 
                 Layout.column: 2
                 Layout.row: 2

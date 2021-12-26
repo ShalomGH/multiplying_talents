@@ -46,6 +46,16 @@ Rectangle {
             opacity: 1
             visible: true
         }
+
+        Category_rcoon {
+            opacity: 1
+            visible: true
+        }
+
+        Category_rcoon {
+            opacity: 1
+            visible: true
+        }
     }
 }
 

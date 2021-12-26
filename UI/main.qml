@@ -3,7 +3,7 @@ import QtQuick.Controls.Material 2.12
 import QtQuick.Window
 
 Window {
-    width: 1000
+    width: 1100
     height: 650
     visible: true
     title: qsTr("Translator")

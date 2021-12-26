@@ -49,14 +49,13 @@ T.TextField {
                              contentHeight + topPadding + bottomPadding,
                              placeholder.implicitHeight + topPadding + bottomPadding)
 
-//    topPadding:
-    bottomPadding: 16
-
+    topPadding: 4
+    bottomPadding: 4
     color: enabled ? Material.foreground : Material.hintTextColor
     selectionColor: Material.accentColor
     selectedTextColor: Material.primaryHighlightedTextColor
     placeholderTextColor: Material.hintTextColor
-    horizontalAlignment: placeholderText.AlignHCenter
+    horizontalAlignment: TextInput.AlignHCenter
     verticalAlignment: TextInput.AlignVCenter
 
     cursorDelegate: CursorDelegate { }
@@ -64,7 +63,6 @@ T.TextField {
     PlaceholderText {
         id: placeholder
         x: control.leftPadding
-
         y: control.topPadding
         width: control.width - (control.leftPadding + control.rightPadding)
         height: control.height - (control.topPadding + control.bottomPadding)
@@ -88,7 +86,7 @@ T.TextField {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:2;height:48;width:522}D{i:2}
+    D{i:0;height:30;width:522}D{i:2}
 }
 ##^##*/
 

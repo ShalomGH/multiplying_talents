@@ -5,24 +5,23 @@ import sys
 
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
-from PySide6.QtCore import QCoreApplication, Qt, QUrl
+from PySide6.QtCore import QObject, QUrl, Slot
+
+from classes import Foo
 
 
 if __name__ == "__main__":
-    app = QGuiApplication(sys.argv)
+    app = QGuiApplication()
+    foo = Foo()
 
     engine = QQmlApplicationEngine()
+    engine.rootContext().setContextProperty("foo", foo)
 
-    filename = os.fspath("UI/main.qml")
-    url = QUrl.fromLocalFile(filename)
+    qml_file = "UI/main.qml"
+    current_dir = os.path.dirname(os.path.realpath(__file__))
+    filename = os.path.join(current_dir, qml_file)
+    engine.load(QUrl.fromLocalFile(filename))
 
-
-    def handle_object_created(obj, obj_url):
-        if obj is None and url == obj_url:
-            QCoreApplication.exit(-1)
-
-
-    engine.objectCreated.connect(handle_object_created, Qt.QueuedConnection)
-    engine.load(url)
-
+    if not engine.rootObjects():
+        sys.exit(-1)
     sys.exit(app.exec())

@@ -28,31 +28,37 @@ Rectangle {
         spacing: 2
 
         Category_rcoon {
+            id: cat_in_1
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
+            id: cat_in_2
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
+            id: cat_in_3
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
+            id: cat_in_4
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
+            id: cat_in_5
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
+            id: cat_in_6
             opacity: 1
             visible: true
         }

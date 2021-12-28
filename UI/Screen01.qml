@@ -9,7 +9,7 @@ Rectangle {
     id: m_rectangle
     anchors.fill: parent
 
-    color: "#903475"
+    color: "#ecc8e1"
 
     Material.theme: Material.System
     Material.accent: Material.Purple
@@ -19,6 +19,8 @@ Rectangle {
 
         anchors.fill: parent
         anchors.margins: 10
+        rowSpacing: 4
+        columnSpacing: 4
 
         columns: 3
         rows: 3
@@ -66,9 +68,11 @@ Rectangle {
 
         }
 
-        Standart_rcoon {id: standart_rcoon_input}
+        Standard_rcoon {id: standart_rcoon_input}
 
-        Standart_rf_2013_output {}
+        Standard_rf_2013_output {id: standart_rf_2013_output}
+
+
 
         Button {
             id: button
@@ -77,7 +81,7 @@ Rectangle {
 
             onClicked: {
                 foo.standards(from_sdt.currentIndex, to_sdt.currentIndex)
-//                foo.read_category(standart_rcoon_input.cat_in_1.opacity)
+                foo.read_category(standart_rcoon_input.categories)
             }
 
             Layout.column: 1
@@ -88,11 +92,3 @@ Rectangle {
         }
     }
 }
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.9;height:480;width:640}D{i:2}D{i:3}D{i:9}D{i:10}
-D{i:11}D{i:1}
-}
-##^##*/
-

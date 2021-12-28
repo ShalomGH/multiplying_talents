@@ -5,10 +5,8 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls.Material 2.3
 
 
-Rectangle {
-    id: in_rect
-    color: "#997e91"
-
+Item {
+    property variant categories: [cat_in_1.values, cat_in_2.values, cat_in_3.values, cat_in_4.values, cat_in_5.values, cat_in_6.values]
     Layout.rightMargin: 8
     Layout.bottomMargin: 4
     Layout.leftMargin: 8
@@ -23,9 +21,8 @@ Rectangle {
     Layout.rowSpan: 2
 
     ColumnLayout {
-        id: in_grid
         anchors.fill: parent
-        spacing: 2
+        spacing: 8
 
         Category_rcoon {
             id: cat_in_1
@@ -64,11 +61,3 @@ Rectangle {
         }
     }
 }
-
-
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:2}D{i:3}D{i:4}D{i:5}D{i:6}D{i:7}D{i:1}
-}
-##^##*/

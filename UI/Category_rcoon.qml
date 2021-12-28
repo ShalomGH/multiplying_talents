@@ -4,22 +4,21 @@ import QtQuick.Layouts 1.15
 
 import QtQuick.Controls.Material 2.3
 
-Rectangle {
-    id: in1
-    color: "#d09bc0"
+Item {
+    property variant values: [e_category.currentIndex, f_category.currentIndex, g_category.currentIndex, input_value.text]
 
+    anchors.margins: 8
     Layout.fillHeight: true
     Layout.fillWidth: true
-    border.width: 1
 
     GridLayout {
-        id: in1_grid
-
-        anchors.margins: 4
         anchors.fill: parent
+        anchors.margins: 2
 
         columns: 8
         rows: 2
+        rowSpacing: 4
+        columnSpacing: 4
 
         Text {
             id: e1
@@ -85,8 +84,48 @@ Rectangle {
             Layout.column: 7
             Layout.row: 0
             Layout.columnSpan: 2
+            onActivated:{
+                foo.print()
+            }
         }
 
+
+        ComboBox {
+            id:adding_question
+            visible: false
+
+            implicitWidth: parent * 0.8
+
+            model: ListModel {
+                id: model
+                ListElement { text: "Разрабатываемые, все данные собраны" }
+                ListElement { text: "Разрабатываемые, не все данные собраны" }
+                ListElement { text: "неразрабатываемые" }
+            }
+
+            Layout.column: 0
+            Layout.row: 2
+            Layout.columnSpan: 6
+        }
+
+        ComboBox {
+            id:adding_question_d
+            visible: false
+
+            implicitWidth: parent * 0.8
+
+            model: ListModel {
+                id: model_d
+                ListElement { text: "Подготовлены к поисковому бурению" }
+                ListElement { text: "Разведанны вне доказанных нефтяных районов" }
+                ListElement { text: "Ресурсы плеев с открытыми залежами" }
+                ListElement { text: "Ресурсы плеев с закрытыми залежами" }
+            }
+
+            Layout.column: 0
+            Layout.row: 2
+            Layout.columnSpan: 6
+        }
 
         Text_field_my {
             id: input_value
@@ -104,17 +143,11 @@ Rectangle {
                 border.color: "#000000"
             }
 
+
             Layout.fillWidth: true
-            Layout.column: 3
+            Layout.column: 6
             Layout.row: 2
-            Layout.columnSpan: 4
+            Layout.columnSpan: 3
         }
     }
 }
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:600;width:700}D{i:2}D{i:3}D{i:4}D{i:5}D{i:6}D{i:7}D{i:8}
-D{i:1}
-}
-##^##*/

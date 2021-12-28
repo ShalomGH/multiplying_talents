@@ -7,8 +7,12 @@ class Foo(QObject):
     def standards(self, input_cat, output_cat):
         print(input_cat, output_cat)
 
-    @Slot(int, int, int, int)
-    def read_category(self, e_input):
-        print(e_input)
+    @Slot(list)
+    def read_category(self, input):
+        print(input)
+
+    @Slot()
+    def print(self):
+        print("test")
 
 #         , f_input, g_input, value

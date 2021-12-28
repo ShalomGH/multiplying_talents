@@ -80,8 +80,8 @@ Rectangle {
             text: qsTr("Translate")
 
             onClicked: {
-                foo.standards(from_sdt.currentIndex, to_sdt.currentIndex)
-                foo.read_category(standart_rcoon_input.categories)
+                backend.standards(from_sdt.currentIndex, to_sdt.currentIndex)
+                backend.read_categories(standart_rcoon_input.categories)
             }
 
             Layout.column: 1

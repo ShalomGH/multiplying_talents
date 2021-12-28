@@ -26,38 +26,92 @@ Item {
 
         Category_rcoon {
             id: cat_in_1
+            category_num: 1
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
             id: cat_in_2
+            category_num: 2
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
             id: cat_in_3
+            category_num: 3
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
             id: cat_in_4
+            category_num: 4
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
             id: cat_in_5
+            category_num: 5
             opacity: 1
             visible: true
         }
 
         Category_rcoon {
             id: cat_in_6
+            category_num: 6
             opacity: 1
             visible: true
+        }
+    }
+    Connections{
+        target: backend
+        function onIsVisible1(isVisible){
+            cat_in_1.isVisible = isVisible
+        }
+        function onIsVisible_d1(isVisible_d){
+            cat_in_1.isVisible_d = isVisible_d
+        }
+
+        function onIsVisible2(isVisible){
+            cat_in_2.isVisible = isVisible
+        }
+        function onIsVisible_d2(isVisible_d){
+            cat_in_2.isVisible_d = isVisible_d
+        }
+
+        function onIsVisible3(isVisible){
+            cat_in_3.isVisible = isVisible
+
+        }
+        function onIsVisible_d3(isVisible_d){
+            cat_in_3.isVisible_d = isVisible_d
+        }
+
+        function onIsVisible4(isVisible){
+            cat_in_4.isVisible = isVisible
+
+        }
+        function onIsVisible_d4(isVisible_d){
+            cat_in_4.isVisible_d = isVisible_d
+        }
+
+        function onIsVisible5(isVisible){
+            cat_in_5.isVisible = isVisible
+
+        }
+        function onIsVisible_d5(isVisible_d){
+            cat_in_5.isVisible_d = isVisible_d
+        }
+
+        function onIsVisible6(isVisible){
+            cat_in_6.isVisible = isVisible
+
+        }
+        function onIsVisible_d6(isVisible_d){
+            cat_in_6.isVisible_d = isVisible_d
         }
     }
 }

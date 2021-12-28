@@ -7,15 +7,14 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtCore import QObject, QUrl, Slot
 
-from classes import Foo
-
+from classes import Backend
 
 if __name__ == "__main__":
     app = QGuiApplication()
-    foo = Foo()
+    backend = Backend()
 
     engine = QQmlApplicationEngine()
-    engine.rootContext().setContextProperty("foo", foo)
+    engine.rootContext().setContextProperty("backend", backend)
 
     qml_file = "UI/main.qml"
     current_dir = os.path.dirname(os.path.realpath(__file__))

@@ -5,9 +5,10 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls.Material 2.3
 
 Rectangle {
+    property string cat
+
     id: rf_2013_output_ctgr
 
-    visible: true
     color: "#d09bc0"
 
     Layout.fillHeight: true
@@ -22,15 +23,15 @@ Rectangle {
         background: Rectangle {color: "#eeeeee"}
 
         Label {
-            text: qsTr("Content")
+            text: qsTr("Contewwnt")
             anchors.centerIn: parent
         }
     }
 
     Pane {
-        id: rect2
+        id: alpf_value
 
-        width: rf_2013_output_ctgr.width * 0.69
+        width: rf_2013_output_ctgr.width * 0.692
         height: rf_2013_output_ctgr.height
 
         anchors.left: alpf_num.right
@@ -44,9 +45,3 @@ Rectangle {
         }
     }
 }
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:3}D{i:1}D{i:6}D{i:4}
-}
-##^##*/
-

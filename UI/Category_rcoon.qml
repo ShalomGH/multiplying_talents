@@ -5,7 +5,10 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls.Material 2.3
 
 Item {
-    property variant values: [e_category.currentIndex, f_category.currentIndex, g_category.currentIndex, input_value.text]
+    property variant values: [e_category.currentIndex, f_category.currentIndex, g_category.currentIndex, adding_question_1.currentIndex, adding_question_2.currentIndex, input_value.text]
+    property int category_num
+    property bool isVisible: false
+    property bool isVisible_d: false
 
     anchors.margins: 8
     Layout.fillHeight: true
@@ -35,7 +38,7 @@ Item {
         ComboBox {
             id: e_category
 
-            model: ["1", "1.1", "1.2", "2", "3.1", "3.2", "3.3"]
+            model: ["1.1", "1.2", "2", "3.2", "3.3"]
 
             Layout.column: 1
             Layout.row: 0
@@ -79,28 +82,29 @@ Item {
         ComboBox {
             id: g_category
 
-            model: ["1", "2-3", "4", "4.1", "4.2", "4.3"]
+            model: ["1", "2-3", "4"]
 
             Layout.column: 7
             Layout.row: 0
             Layout.columnSpan: 2
             onActivated:{
-                foo.print()
+                backend.print()
+                backend.read_category(values, category_num)
             }
         }
 
 
         ComboBox {
-            id:adding_question
-            visible: false
+            id:adding_question_1
+            visible: isVisible
 
             implicitWidth: parent * 0.8
 
             model: ListModel {
                 id: model
-                ListElement { text: "Разрабатываемые, все данные собраны" }
-                ListElement { text: "Разрабатываемые, не все данные собраны" }
-                ListElement { text: "неразрабатываемые" }
+                ListElement { text: "Разрабатываемые, есть все параметры" }
+                ListElement { text: "Разрабатываемые, нет всех параметров" }
+                ListElement { text: "Неразрабатываемые" }
             }
 
             Layout.column: 0
@@ -109,17 +113,17 @@ Item {
         }
 
         ComboBox {
-            id:adding_question_d
-            visible: false
+            id: adding_question_2
+            visible: isVisible_d
 
             implicitWidth: parent * 0.8
 
             model: ListModel {
                 id: model_d
-                ListElement { text: "Подготовлены к поисковому бурению" }
-                ListElement { text: "Разведанны вне доказанных нефтяных районов" }
-                ListElement { text: "Ресурсы плеев с открытыми залежами" }
-                ListElement { text: "Ресурсы плеев с закрытыми залежами" }
+                ListElement { text: "Готовы к поисковому бурению" }
+                ListElement { text: "Вне доказанных нефтяных районов" }
+                ListElement { text: "Ресурсы нефтеносных плеев" }
+                ListElement { text: "Ресурсы неизученных плеев" }
             }
 
             Layout.column: 0
@@ -142,7 +146,6 @@ Item {
                 color: "#ffffff"
                 border.color: "#000000"
             }
-
 
             Layout.fillWidth: true
             Layout.column: 6

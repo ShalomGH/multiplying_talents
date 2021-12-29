@@ -1,9 +1,8 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import QtQuick.Controls.Material 2.3
-
 
 Item {
     property variant categories: [cat_in_1.values, cat_in_2.values, cat_in_3.values, cat_in_4.values, cat_in_5.values, cat_in_6.values]
@@ -84,7 +83,6 @@ Item {
 
         function onIsVisible3(isVisible){
             cat_in_3.isVisible = isVisible
-
         }
         function onIsVisible_d3(isVisible_d){
             cat_in_3.isVisible_d = isVisible_d
@@ -92,7 +90,6 @@ Item {
 
         function onIsVisible4(isVisible){
             cat_in_4.isVisible = isVisible
-
         }
         function onIsVisible_d4(isVisible_d){
             cat_in_4.isVisible_d = isVisible_d
@@ -100,7 +97,6 @@ Item {
 
         function onIsVisible5(isVisible){
             cat_in_5.isVisible = isVisible
-
         }
         function onIsVisible_d5(isVisible_d){
             cat_in_5.isVisible_d = isVisible_d
@@ -108,7 +104,6 @@ Item {
 
         function onIsVisible6(isVisible){
             cat_in_6.isVisible = isVisible
-
         }
         function onIsVisible_d6(isVisible_d){
             cat_in_6.isVisible_d = isVisible_d

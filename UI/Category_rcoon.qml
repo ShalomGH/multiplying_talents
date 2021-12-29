@@ -1,14 +1,18 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import QtQuick.Controls.Material 2.3
 
-Item {
+Rectangle {
     property variant values: [e_category.currentIndex, f_category.currentIndex, g_category.currentIndex, adding_question_1.currentIndex, adding_question_2.currentIndex, input_value.text]
     property int category_num
     property bool isVisible: false
     property bool isVisible_d: false
+
+    color: "#f1f0eb"
+
+    radius: 10
 
     anchors.margins: 8
     Layout.fillHeight: true
@@ -16,18 +20,18 @@ Item {
 
     GridLayout {
         anchors.fill: parent
-        anchors.margins: 2
+        anchors.margins: 8
 
         columns: 8
         rows: 2
-        rowSpacing: 4
-        columnSpacing: 4
+        rowSpacing: 0
+        columnSpacing: 8
 
         Text {
             id: e1
 
             text: qsTr("E ")
-
+            font.pixelSize: 20
             Layout.column: 0
             Layout.row: 0
             Layout.fillWidth: true
@@ -43,12 +47,17 @@ Item {
             Layout.column: 1
             Layout.row: 0
             Layout.columnSpan: 2
+            onActivated:{
+                backend.read_category(values, category_num)
+                backend.change_category_letter(values, category_num)
+            }
         }
 
         Text {
             id: f1
 
             text: qsTr("F ")
+            font.pixelSize: 20
 
             Layout.column: 3
             Layout.row: 0
@@ -65,12 +74,17 @@ Item {
             Layout.column: 4
             Layout.row: 0
             Layout.columnSpan: 2
+            onActivated:{
+                backend.read_category(values, category_num)
+                backend.change_category_letter(values, category_num)
+            }
         }
 
         Text {
             id: g1
 
             text: qsTr("G ")
+            font.pixelSize: 20
 
             Layout.column: 6
             Layout.row: 0
@@ -82,14 +96,15 @@ Item {
         ComboBox {
             id: g_category
 
-            model: ["1", "2-3", "4"]
+            model: ["1", "2+3", "4"]
 
             Layout.column: 7
             Layout.row: 0
             Layout.columnSpan: 2
             onActivated:{
-                backend.print()
                 backend.read_category(values, category_num)
+                backend.change_category_letter(values, category_num)
+                backend.change_category_value(values, category_num)
             }
         }
 
@@ -100,6 +115,7 @@ Item {
 
             implicitWidth: parent * 0.8
 
+            currentIndex:100
             model: ListModel {
                 id: model
                 ListElement { text: "Разрабатываемые, есть все параметры" }
@@ -110,6 +126,11 @@ Item {
             Layout.column: 0
             Layout.row: 2
             Layout.columnSpan: 6
+
+            onActivated:{
+                backend.change_category_letter(values, category_num)
+                backend.change_category_value(values, category_num)
+            }
         }
 
         ComboBox {
@@ -118,12 +139,17 @@ Item {
 
             implicitWidth: parent * 0.8
 
+            currentIndex:100
             model: ListModel {
                 id: model_d
                 ListElement { text: "Готовы к поисковому бурению" }
                 ListElement { text: "Вне доказанных нефтяных районов" }
                 ListElement { text: "Ресурсы нефтеносных плеев" }
                 ListElement { text: "Ресурсы неизученных плеев" }
+            }
+            onActivated:{
+                backend.change_category_letter(values, category_num)
+                backend.change_category_value(values, category_num)
             }
 
             Layout.column: 0
@@ -143,9 +169,12 @@ Item {
             placeholderText: "value"
 
             background: Rectangle {
+                radius: 5
                 color: "#ffffff"
-                border.color: "#000000"
+                border.color: "#75786d"
             }
+
+            onEditingFinished:{backend.change_category_value(values, category_num)}
 
             Layout.fillWidth: true
             Layout.column: 6

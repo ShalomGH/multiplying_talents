@@ -5,7 +5,7 @@ import sys
 
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
-from PySide6.QtCore import QObject, QUrl, Slot
+from PySide6.QtCore import QUrl
 
 from classes import Backend
 

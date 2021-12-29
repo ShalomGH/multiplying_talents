@@ -35,9 +35,9 @@ Window {
                 text: qsTr("About")
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-
             }
         }
+
         Rectangle {
             id: help_rect
             color: "#dce7c9"
@@ -57,7 +57,6 @@ Window {
                 verticalAlignment: Text.AlignVCenter
             }
         }
-
     }
 
     Screen01 {
@@ -70,15 +69,13 @@ Window {
 
     Dialog {
         id: about
-        width: 400
+        width: 600
         height:150
-        visible: about_visible
         anchors.centerIn:parent
-        font.pixelSize: 20
         contentItem: Rectangle {
             Text {
-                text: "Не стандартнadaddad!"
-                font.pixelSize: 30
+                text: "©Made by Vasin Artem, Kulik Aleksandr, Loginov Semen"
+                font.pixelSize: 20
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 wrapMode: Text.WordWrap
@@ -88,23 +85,20 @@ Window {
     }
     Dialog {
         id: help
-        width: 800
-        height:600
-        visible: help_visible
+        width: 850
+        height:400
         anchors.centerIn:parent
-        font.pixelSize: 20
         contentItem: Rectangle {
             Text {
                 width: 800
-                text: " < Вы можете переводить категории и соответствующие им
+                text: "<p>Вы можете переводить категории и соответствующие им
                       количества нефти РКООН в РФ-2013. Для этого следуйте инструкциям:
-                1.    Введите категорию путём выбора осей EFG
-                2.    Если программа предложила выбрать уточнение выберете из списка
+                <p>1.    Введите категорию путём выбора осей EFG
+                <p>2.    Если программа предложила выбрать уточнение выберете из списка
                         наиболее близко описывающее данные объёмы углеводородов.
-                3.    Укажите количество углеводородов без указания единиц измерения.
-                4.    Если вы хотите ввести ещё категорию то вы можете это сделать в нижеследующем окошке.
-                5.    Как только вы закончили вводить категории нажмите «Translate».
-                Примечание: Если программа выдаёт ошибку «нестандартная категория»,
+                <p>3.    Укажите количество углеводородов без указания единиц измерения.
+                <p>4.    Если вы хотите ввести ещё категорию то вы можете это сделать в нижеследующем окошке.
+                <p><b>Примечание:</b> Если программа выдаёт ошибку «нестандартная категория»,
                 то вы ввели комбинацию EFG, которая является нестандартной и не переводится
                 согласно связующему документу ООН, или вы ввели уточнение,
                 которое не может соотноситься с данной категорией.
@@ -119,10 +113,3 @@ Window {
         }
     }
 }
-
-
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:8}D{i:3}D{i:4}D{i:2}D{i:6}D{i:7}D{i:5}D{i:1}D{i:8}D{i:9}D{i:12}
-}
-##^##*/

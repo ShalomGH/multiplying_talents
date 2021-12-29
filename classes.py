@@ -106,5 +106,4 @@ class Backend(QObject):
             category_6 = CategoryChanger(category_values, self.changeLetterCategoryOut6, self.changeValueCategoryOut6, self.isVisible7)
             category_6.value_changer()
 
-        self.read_categories()
 

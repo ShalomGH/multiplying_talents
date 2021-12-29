@@ -9,9 +9,6 @@ Rectangle {
 
     color: "#fdfdf5"
 
-//    Material.theme: Material.System
-//    Material.accent: "#426918"
-
     GridLayout {
         id: main_grid
 
@@ -19,7 +16,6 @@ Rectangle {
         anchors.margins: 10
         rowSpacing: 4
         columnSpacing: 4
-
         columns: 3
         rows: 3
 
@@ -62,35 +58,11 @@ Rectangle {
             Layout.row: 0
             Layout.columnSpan: 1
             Layout.rowSpan: 1
-
-
         }
 
         Standard_rcoon {id: standart_rcoon_input}
 
         Standard_rf_2013_output {id: standart_rf_2013_output}
-
-
-
-        Button {
-            id: button_a
-            Material.background: "#5f7f3c"
-            Material.foreground: "#e1f6df"
-
-            text: qsTr("Translate")
-
-            onClicked: {
-//                err_dialog.visible = true
-                backend.dialog_enable()
-//                backend.standards(from_sdt.currentIndex, to_sdt.currentIndex)
-//                backend.read_categories(standart_rcoon_input.categories)
-            }
-
-            Layout.column: 1
-            Layout.row: 2
-            Layout.columnSpan: 1
-            Layout.rowSpan: 1
-        }
 
         Dialog {
             id: err_dialog
@@ -109,18 +81,11 @@ Rectangle {
                 }
             }
         }
-    Connections{
-        target: backend
-        function onIsVisible7(isVisible) {
-            err_dialog.visible = isVisible
+        Connections{
+            target: backend
+            function onIsVisible7(isVisible) {
+                err_dialog.visible = isVisible
+            }
         }
     }
-    }
 }
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;formeditorZoom:1.33;height:480;width:640}D{i:2}D{i:8}D{i:14}D{i:15}
-D{i:16}D{i:17}D{i:20}D{i:1}
-}
-##^##*/

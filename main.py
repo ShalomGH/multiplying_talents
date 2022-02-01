@@ -1,26 +1,21 @@
-# This Python file uses the following encoding: utf-8
-import os
-from pathlib import Path
+from PyQt5 import QtWidgets
+from ui import Ui_MainWindow
 import sys
 
-from PySide6.QtGui import QGuiApplication
-from PySide6.QtQml import QQmlApplicationEngine
-from PySide6.QtCore import QUrl
 
-from classes import Backend
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.in_rf_category.activated.connect(self.btn_clicked)
 
-if __name__ == "__main__":
-    app = QGuiApplication()
-    backend = Backend()
+    def btn_clicked(self):
+        print("in_rf_category")
 
-    engine = QQmlApplicationEngine()
-    engine.rootContext().setContextProperty("backend", backend)
 
-    qml_file = "UI/main.qml"
-    current_dir = os.path.dirname(os.path.realpath(__file__))
-    filename = os.path.join(current_dir, qml_file)
-    engine.load(QUrl.fromLocalFile(filename))
+app = QtWidgets.QApplication([])
+application = MainWindow()
+application.show()
 
-    if not engine.rootObjects():
-        sys.exit(-1)
-    sys.exit(app.exec())
+sys.exit(app.exec())

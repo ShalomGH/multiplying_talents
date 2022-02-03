@@ -58,9 +58,15 @@
       <height>2</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <layout class="QGridLayout" name="gridLayout"/>
    </widget>
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="in_categories">
     <property name="geometry">
      <rect>
       <x>24</x>
@@ -68,6 +74,12 @@
       <width>476</width>
       <height>445</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="font">
      <font>
@@ -117,7 +129,7 @@ border-top-left-radius: 30px;
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="rf2013">
+    <widget class="QWidget" name="rf_in">
      <property name="font">
       <font>
        <family>Roboto</family>
@@ -138,6 +150,12 @@ border-top-left-radius: 30px;
         <width>477</width>
         <height>397</height>
        </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="font">
        <font>
@@ -164,6 +182,12 @@ border-bottom-left-radius: 30px;</string>
          <width>109</width>
          <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -196,9 +220,15 @@ QGroupBox::title {
          <rect>
           <x>4</x>
           <y>16</y>
-          <width>99</width>
+          <width>117</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -281,7 +311,7 @@ QComboBox::drop-down {
         </item>
        </widget>
       </widget>
-      <widget class="QGroupBox" name="groupBox_2">
+      <widget class="QGroupBox" name="in_rf_que_1_box">
        <property name="geometry">
         <rect>
          <x>92</x>
@@ -289,6 +319,12 @@ QComboBox::drop-down {
          <width>249</width>
          <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -322,6 +358,12 @@ QGroupBox::title {
           <width>241</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -386,7 +428,7 @@ QComboBox::drop-down {
         </item>
        </widget>
       </widget>
-      <widget class="QGroupBox" name="groupBox_3">
+      <widget class="QGroupBox" name="in_rf_que_2_box">
        <property name="geometry">
         <rect>
          <x>92</x>
@@ -394,6 +436,12 @@ QComboBox::drop-down {
          <width>249</width>
          <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -426,6 +474,12 @@ QGroupBox::title {
           <width>241</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -504,6 +558,12 @@ QComboBox::drop-down {
          <height>33</height>
         </rect>
        </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
          <family>Roboto Light</family>
@@ -553,7 +613,7 @@ QTabBar::tab:!selected {
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="rkoon">
+    <widget class="QWidget" name="rk_in">
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -1096,7 +1156,7 @@ QComboBox::drop-down {
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="prms">
+    <widget class="QWidget" name="prms_in">
      <attribute name="title">
       <string>PRMS</string>
      </attribute>
@@ -1435,7 +1495,7 @@ QComboBox::drop-down {
      </widget>
     </widget>
    </widget>
-   <widget class="QTabWidget" name="tabWidget_2">
+   <widget class="QTabWidget" name="out_categories">
     <property name="geometry">
      <rect>
       <x>524</x>
@@ -1443,6 +1503,12 @@ QComboBox::drop-down {
       <width>476</width>
       <height>456</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="font">
      <font>
@@ -1490,9 +1556,9 @@ border-top-left-radius: 30px;
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
-    <widget class="QWidget" name="rf2013_2">
+    <widget class="QWidget" name="rf_out">
      <property name="font">
       <font>
        <family>Roboto</family>
@@ -1514,6 +1580,12 @@ border-top-left-radius: 30px;
         <height>397</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">Background-color: #ffffff;
 border-bottom-right-radius: 30px;
@@ -1534,6 +1606,12 @@ border-bottom-left-radius: 30px;</string>
          <height>129</height>
         </rect>
        </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <property name="spacing">
          <number>0</number>
@@ -1542,6 +1620,12 @@ border-bottom-left-radius: 30px;</string>
          <layout class="QHBoxLayout" name="horizontalLayout_10">
           <item>
            <widget class="QLabel" name="label_18">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="font">
              <font>
               <family>Roboto Medium</family>
@@ -1555,6 +1639,12 @@ border-bottom-left-radius: 30px;</string>
           </item>
           <item>
            <widget class="QLabel" name="out_rf_category">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="font">
              <font>
               <family>Roboto Light</family>
@@ -1562,7 +1652,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Текст</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1572,6 +1662,12 @@ border-bottom-left-radius: 30px;</string>
          <layout class="QHBoxLayout" name="horizontalLayout_9">
           <item>
            <widget class="QLabel" name="label_17">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="font">
              <font>
               <family>Roboto Medium</family>
@@ -1585,6 +1681,12 @@ border-bottom-left-radius: 30px;</string>
           </item>
           <item>
            <widget class="QLabel" name="out_rf_profit">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="font">
              <font>
               <family>Roboto Light</family>
@@ -1592,7 +1694,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Текст</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1602,7 +1704,7 @@ border-bottom-left-radius: 30px;</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="rkoon_2">
+    <widget class="QWidget" name="rk_out">
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -1666,7 +1768,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Известные источники</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1699,7 +1801,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Промышленные проекты</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1729,7 +1831,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>В разработке</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1769,7 +1871,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>2.3</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1782,7 +1884,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Разработка не планируется</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1812,7 +1914,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>1.1</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1825,7 +1927,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Рентабельна</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1855,7 +1957,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>1</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1868,7 +1970,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Высоко достоверны</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1878,7 +1980,7 @@ border-bottom-left-radius: 30px;</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="prms_2">
+    <widget class="QWidget" name="prms_out">
      <attribute name="title">
       <string>PRMS</string>
      </attribute>
@@ -1939,7 +2041,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Текст</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1969,7 +2071,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Текст</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -1999,7 +2101,7 @@ border-bottom-left-radius: 30px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Текст</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -2015,7 +2117,232 @@ border-bottom-left-radius: 30px;</string>
  </widget>
  <layoutdefault spacing="4" margin="4"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rf_category</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>624</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>782</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rf_profit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>689</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>269</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_superclass</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>756</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_class</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>781</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>784</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_subclass</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>816</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>800</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_e_lett</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>811</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>827</x>
+     <y>286</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_g_lett_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>948</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>857</x>
+     <y>333</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_g_lett</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>885</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>844</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_e_num</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>737</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>684</x>
+     <y>281</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_f_num</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>685</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_rk_g_num</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>769</x>
+     <y>29</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>695</x>
+     <y>426</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_prms_superclass</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>621</x>
+     <y>37</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>801</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_prms_class</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>776</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>825</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>out_categories</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>out_prms_subclass</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>897</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>827</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <designerdata>
   <property name="gridDeltaX">
    <number>4</number>

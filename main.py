@@ -38,7 +38,7 @@ def rf_handler(self):
             self.ui.in_rf_que_1.addItems([" ", "Рентабельны", "Рентабельны в перспективе"])
 
             self.ui.in_rf_que_2.clear()
-            self.ui.in_rf_que_2.addItems([" ", "Проект ведётся", "Проект на утверждении" , "Проект задержан"])
+            self.ui.in_rf_que_2.addItems([" ", "Проект ведётся", "Проект на утверждении", "Проект задержан"])
 
             self.ui.in_rf_que_1_box.setVisible(1)
             self.ui.in_rf_que_2_box.setVisible(1)
@@ -47,7 +47,6 @@ def rf_handler(self):
             self.ui.in_rf_que_1_box.setVisible(0)
             self.ui.in_rf_que_2_box.setVisible(0)
 
-
     # обработка остальных категорий
     if rf_letter in [4, 5, 6, 7, 8, 9]:
         print(("none/**"))
@@ -55,19 +54,24 @@ def rf_handler(self):
         self.ui.in_rf_stars.setVisible(1)
 
         if rf_letter in [4, 5]:
-            self.ui.in_rf_que_1.clear()
-            self.ui.in_rf_que_2.addItems([" ", "Рентабельны", "Добываются в убыток"])
-            self.ui.in_rf_que_2.clear()
-            self.ui.in_rf_que_1.addItems([" ", "Рентабельны", "Добываются в убыток"])
+            if rf_stars == 0:
+                self.ui.in_rf_que_1.clear()
+                self.ui.in_rf_que_1.addItems([" ", "Рентабельны", "Рентабельны в перспективе", "Рентабельность не известна", "Не рентабельны"])
 
-            self.ui.in_rf_que_1_box.setVisible(1)
-            self.ui.in_rf_que_2_box.setVisible(1)
+                self.ui.in_rf_que_2.clear()
+                self.ui.in_rf_que_2.addItems([" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано", "Проектирование не планируется"])
+
+                self.ui.in_rf_que_1_box.setVisible(1)
+                self.ui.in_rf_que_2_box.setVisible(1)
+
+            if rf_stars == 2:
+                self.ui.in_rf_que_1_box.setVisible(0)
+                self.ui.in_rf_que_2_box.setVisible(0)
 
         if rf_letter in [6, 7, 8, 9]:
             self.ui.in_rf_que_1_box.setVisible(0)
             self.ui.in_rf_que_2_box.setVisible(0)
 
-    print(rf_letter)
 
 
 # def btn_clicked(self):

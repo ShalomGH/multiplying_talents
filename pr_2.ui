@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>1028</width>
-    <height>0</height>
+    <height>487</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -961,7 +961,7 @@ QComboBox::drop-down {width:1}
         </item>
        </widget>
       </widget>
-      <widget class="QGroupBox" name="groupBox_7">
+      <widget class="QGroupBox" name="in_rk_que_1_box">
        <property name="geometry">
         <rect>
          <x>124</x>
@@ -1062,7 +1062,7 @@ QComboBox::drop-down {
         </item>
        </widget>
       </widget>
-      <widget class="QGroupBox" name="groupBox_8">
+      <widget class="QGroupBox" name="in_rk_que_2_box">
        <property name="geometry">
         <rect>
          <x>124</x>

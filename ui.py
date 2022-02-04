@@ -14,13 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1028, 542)
+        MainWindow.resize(1028, 487)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QtCore.QSize(1028, 542))
+        MainWindow.setMinimumSize(QtCore.QSize(1028, 487))
         MainWindow.setMaximumSize(QtCore.QSize(1028, 542))
         MainWindow.setBaseSize(QtCore.QSize(1028, 542))
         font = QtGui.QFont()
@@ -485,18 +485,18 @@ class Ui_MainWindow(object):
         self.in_rk_g.addItem("")
         self.in_rk_g.addItem("")
         self.in_rk_g.addItem("")
-        self.groupBox_7 = QtWidgets.QGroupBox(self.frame_2)
-        self.groupBox_7.setGeometry(QtCore.QRect(124, 152, 249, 49))
+        self.in_rk_que_1_box = QtWidgets.QGroupBox(self.frame_2)
+        self.in_rk_que_1_box.setGeometry(QtCore.QRect(124, 152, 249, 49))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_7.sizePolicy().hasHeightForWidth())
-        self.groupBox_7.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.in_rk_que_1_box.sizePolicy().hasHeightForWidth())
+        self.in_rk_que_1_box.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto Medium")
         font.setPointSize(10)
-        self.groupBox_7.setFont(font)
-        self.groupBox_7.setStyleSheet("QGroupBox {\n"
+        self.in_rk_que_1_box.setFont(font)
+        self.in_rk_que_1_box.setStyleSheet("QGroupBox {\n"
 "    background-color: #ffffff;\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
@@ -508,8 +508,8 @@ class Ui_MainWindow(object):
 "    subcontrol-position: top left; /* position at the top center */\n"
 "    padding: 0 3px;\n"
 "}")
-        self.groupBox_7.setObjectName("groupBox_7")
-        self.in_rk_que_1 = QtWidgets.QComboBox(self.groupBox_7)
+        self.in_rk_que_1_box.setObjectName("in_rk_que_1_box")
+        self.in_rk_que_1 = QtWidgets.QComboBox(self.in_rk_que_1_box)
         self.in_rk_que_1.setGeometry(QtCore.QRect(4, 16, 241, 25))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
@@ -540,18 +540,18 @@ class Ui_MainWindow(object):
         self.in_rk_que_1.addItem("")
         self.in_rk_que_1.addItem("")
         self.in_rk_que_1.addItem("")
-        self.groupBox_8 = QtWidgets.QGroupBox(self.frame_2)
-        self.groupBox_8.setGeometry(QtCore.QRect(124, 220, 249, 49))
+        self.in_rk_que_2_box = QtWidgets.QGroupBox(self.frame_2)
+        self.in_rk_que_2_box.setGeometry(QtCore.QRect(124, 220, 249, 49))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_8.sizePolicy().hasHeightForWidth())
-        self.groupBox_8.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.in_rk_que_2_box.sizePolicy().hasHeightForWidth())
+        self.in_rk_que_2_box.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto Medium")
         font.setPointSize(10)
-        self.groupBox_8.setFont(font)
-        self.groupBox_8.setStyleSheet("QGroupBox {\n"
+        self.in_rk_que_2_box.setFont(font)
+        self.in_rk_que_2_box.setStyleSheet("QGroupBox {\n"
 "    background-color: #ffffff;\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 5px;\n"
@@ -563,8 +563,8 @@ class Ui_MainWindow(object):
 "    subcontrol-position: top left; /* position at the top center */\n"
 "    padding: 0 3px;\n"
 "}")
-        self.groupBox_8.setObjectName("groupBox_8")
-        self.in_rk_que_2 = QtWidgets.QComboBox(self.groupBox_8)
+        self.in_rk_que_2_box.setObjectName("in_rk_que_2_box")
+        self.in_rk_que_2 = QtWidgets.QComboBox(self.in_rk_que_2_box)
         self.in_rk_que_2.setGeometry(QtCore.QRect(12, 20, 229, 25))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
@@ -1334,11 +1334,11 @@ class Ui_MainWindow(object):
         self.in_rk_g.setItemText(1, _translate("MainWindow", "1"))
         self.in_rk_g.setItemText(2, _translate("MainWindow", "2+3"))
         self.in_rk_g.setItemText(3, _translate("MainWindow", "4"))
-        self.groupBox_7.setTitle(_translate("MainWindow", "Определение"))
+        self.in_rk_que_1_box.setTitle(_translate("MainWindow", "Определение"))
         self.in_rk_que_1.setItemText(1, _translate("MainWindow", "Эксплуатируются"))
         self.in_rk_que_1.setItemText(2, _translate("MainWindow", "Разрабатываются"))
         self.in_rk_que_1.setItemText(3, _translate("MainWindow", "Только разведаны"))
-        self.groupBox_8.setTitle(_translate("MainWindow", "Определение"))
+        self.in_rk_que_2_box.setTitle(_translate("MainWindow", "Определение"))
         self.in_rk_que_2.setItemText(1, _translate("MainWindow", "Частично изучены"))
         self.in_rk_que_2.setItemText(2, _translate("MainWindow", "Только локализованы"))
         self.in_rk_que_2.setItemText(3, _translate("MainWindow", "Плей нефтеносного района"))

@@ -71,8 +71,8 @@
      <rect>
       <x>24</x>
       <y>20</y>
-      <width>476</width>
-      <height>445</height>
+      <width>473</width>
+      <height>437</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -145,7 +145,7 @@ border-top-left-radius: 30px;
      <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
-        <x>-4</x>
+        <x>0</x>
         <y>4</y>
         <width>477</width>
         <height>397</height>
@@ -220,7 +220,7 @@ QGroupBox::title {
          <rect>
           <x>4</x>
           <y>16</y>
-          <width>117</width>
+          <width>101</width>
           <height>25</height>
          </rect>
         </property>
@@ -398,11 +398,6 @@ QComboBox::drop-down {
         </item>
         <item>
          <property name="text">
-          <string>Нет уточнений</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
           <string>Рентабельны</string>
          </property>
         </item>
@@ -516,32 +511,22 @@ QComboBox::drop-down {
         </item>
         <item>
          <property name="text">
-          <string>Нет уточнений</string>
+          <string>Проект на утверждении</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны</string>
+          <string>Проектирование ведётся</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны в перспективе</string>
+          <string>Проектирование задержано</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельность не известна</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Не рентабельны</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Добываются в убыток</string>
+          <string>Проектирование не планируется</string>
          </property>
         </item>
        </widget>
@@ -553,8 +538,8 @@ QComboBox::drop-down {
        <property name="geometry">
         <rect>
          <x>240</x>
-         <y>84</y>
-         <width>197</width>
+         <y>88</y>
+         <width>162</width>
          <height>33</height>
         </rect>
        </property>
@@ -593,7 +578,7 @@ QTabBar::tab:!selected {
 }</string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="in_rf_stars_nonetab">
         <attribute name="title">
@@ -955,6 +940,12 @@ QComboBox::drop-down {width:1}
          <height>49</height>
         </rect>
        </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="font">
         <font>
          <family>Roboto Medium</family>
@@ -976,7 +967,7 @@ QGroupBox::title {
 }</string>
        </property>
        <property name="title">
-        <string>Экономическая рентабельность</string>
+        <string>Определение</string>
        </property>
        <widget class="QComboBox" name="in_rk_que_1">
         <property name="geometry">
@@ -987,6 +978,12 @@ QGroupBox::title {
           <height>25</height>
          </rect>
         </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="font">
          <font>
           <family>Roboto Light</family>
@@ -1020,32 +1017,17 @@ QComboBox::drop-down {
         </item>
         <item>
          <property name="text">
-          <string>Нет уточнений</string>
+          <string>Эксплуатируются</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны</string>
+          <string>Разрабатываются</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны в перспективе</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Рентабельность не известна</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Не рентабельны</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Добываются в убыток</string>
+          <string>Только разведаны</string>
          </property>
         </item>
        </widget>
@@ -1053,11 +1035,17 @@ QComboBox::drop-down {
       <widget class="QGroupBox" name="groupBox_8">
        <property name="geometry">
         <rect>
-         <x>128</x>
-         <y>240</y>
+         <x>124</x>
+         <y>220</y>
          <width>249</width>
          <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -1080,16 +1068,22 @@ QGroupBox::title {
 }</string>
        </property>
        <property name="title">
-        <string>Степень разведанности</string>
+        <string>Определение</string>
        </property>
        <widget class="QComboBox" name="in_rk_que_2">
         <property name="geometry">
          <rect>
-          <x>4</x>
-          <y>16</y>
-          <width>241</width>
+          <x>12</x>
+          <y>20</y>
+          <width>229</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -1124,32 +1118,22 @@ QComboBox::drop-down {
         </item>
         <item>
          <property name="text">
-          <string>Нет уточнений</string>
+          <string>Частично изучены</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны</string>
+          <string>Только локализованы</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны в перспективе</string>
+          <string>Плей нефтеносного района</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельность не известна</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Не рентабельны</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Добываются в убыток</string>
+          <string>Плей неизученного района</string>
          </property>
         </item>
        </widget>
@@ -1183,11 +1167,17 @@ border-bottom-left-radius: 30px;</string>
       <widget class="QGroupBox" name="groupBox_9">
        <property name="geometry">
         <rect>
-         <x>92</x>
-         <y>52</y>
+         <x>116</x>
+         <y>32</y>
          <width>249</width>
          <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -1212,14 +1202,20 @@ QGroupBox::title {
        <property name="title">
         <string>Подкласс</string>
        </property>
-       <widget class="QComboBox" name="in_prms_subclass">
+       <widget class="QComboBox" name="in_prms_que_1">
         <property name="geometry">
          <rect>
           <x>4</x>
           <y>16</y>
           <width>241</width>
-          <height>25</height>
+          <height>29</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -1280,6 +1276,226 @@ QComboBox::drop-down {
         <item>
          <property name="text">
           <string>Добываются в убыток</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="in_rf_que_1_box_2">
+       <property name="geometry">
+        <rect>
+         <x>116</x>
+         <y>104</y>
+         <width>249</width>
+         <height>49</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto Medium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    background-color: #ffffff;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 2ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* position at the top center */
+    padding: 0 3px;
+
+}</string>
+       </property>
+       <property name="title">
+        <string>Экономическая рентабельность</string>
+       </property>
+       <widget class="QComboBox" name="in_prms_que_2">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>16</y>
+          <width>241</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto Light</family>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+    border: 0;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+    subcontrol-position: top right;
+	border-width:0;
+}</string>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhLowercaseOnly</set>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Рентабельны</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Рентабельны в перспективе</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Рентабельность не известна</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Не рентабельны</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Добываются в убыток</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="in_rf_que_2_box_2">
+       <property name="geometry">
+        <rect>
+         <x>116</x>
+         <y>172</y>
+         <width>249</width>
+         <height>49</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto Medium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+    background-color: #ffffff;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 2ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* position at the top center */
+    padding: 0 3px
+}</string>
+       </property>
+       <property name="title">
+        <string>Стадия освоения</string>
+       </property>
+       <widget class="QComboBox" name="in_prms_que_3">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>16</y>
+          <width>241</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Roboto Light</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+    border: 0;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+    subcontrol-position: top right;
+	border-width:0;
+}</string>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhLowercaseOnly</set>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Проект на утверждении</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Проектирование ведётся</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Проектирование задержано</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Проектирование не планируется</string>
          </property>
         </item>
        </widget>
@@ -1287,11 +1503,17 @@ QComboBox::drop-down {
       <widget class="QGroupBox" name="groupBox_10">
        <property name="geometry">
         <rect>
-         <x>88</x>
-         <y>128</y>
+         <x>116</x>
+         <y>236</y>
          <width>249</width>
          <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -1314,16 +1536,22 @@ QGroupBox::title {
 }</string>
        </property>
        <property name="title">
-        <string>Экономическая рентабельность</string>
+        <string>Определение</string>
        </property>
-       <widget class="QComboBox" name="in_prms_profit">
+       <widget class="QComboBox" name="in_prms_que_4">
         <property name="geometry">
          <rect>
           <x>4</x>
-          <y>24</y>
+          <y>16</y>
           <width>241</width>
-          <height>21</height>
+          <height>29</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -1358,32 +1586,17 @@ QComboBox::drop-down {
         </item>
         <item>
          <property name="text">
-          <string>Нет уточнений</string>
+          <string>Эксплуатируются</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны</string>
+          <string>Разрабатываются</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны в перспективе</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Рентабельность не известна</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Не рентабельны</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Добываются в убыток</string>
+          <string>Только разведаны</string>
          </property>
         </item>
        </widget>
@@ -1391,11 +1604,17 @@ QComboBox::drop-down {
       <widget class="QGroupBox" name="groupBox_11">
        <property name="geometry">
         <rect>
-         <x>84</x>
-         <y>208</y>
+         <x>116</x>
+         <y>304</y>
          <width>249</width>
-         <height>53</height>
+         <height>49</height>
         </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
        <property name="font">
         <font>
@@ -1418,16 +1637,22 @@ QGroupBox::title {
 }</string>
        </property>
        <property name="title">
-        <string>Степень освоения</string>
+        <string>Определение</string>
        </property>
-       <widget class="QComboBox" name="in_prms_subclass_2">
+       <widget class="QComboBox" name="in_prms_que_5">
         <property name="geometry">
          <rect>
           <x>4</x>
-          <y>24</y>
+          <y>16</y>
           <width>241</width>
-          <height>25</height>
+          <height>29</height>
          </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -1462,32 +1687,22 @@ QComboBox::drop-down {
         </item>
         <item>
          <property name="text">
-          <string>Нет уточнений</string>
+          <string>Частично изучены</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны</string>
+          <string>Только локализованы</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельны в перспективе</string>
+          <string>Плей нефтеносного района</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>Рентабельность не известна</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Не рентабельны</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Добываются в убыток</string>
+          <string>Плей неизученного района</string>
          </property>
         </item>
        </widget>
@@ -1992,6 +2207,12 @@ border-bottom-left-radius: 30px;</string>
         <width>477</width>
         <height>397</height>
        </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <property name="styleSheet">
        <string notr="true">Background-color: #ffffff;

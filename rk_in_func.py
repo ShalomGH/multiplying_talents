@@ -13,7 +13,6 @@ def rk_handler(self, element):
     self.ui.in_rk_que_2_box.setVisible(0)
 
     if element not in [4, 5]:
-        print(" cleaning 4 and 4")
         self.ui.in_rk_que_1.setCurrentIndex(0)
         self.ui.in_rk_que_2.setCurrentIndex(0)
 

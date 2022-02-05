@@ -14,15 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1028, 487)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
-        MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QtCore.QSize(1028, 487))
-        MainWindow.setMaximumSize(QtCore.QSize(1028, 542))
-        MainWindow.setBaseSize(QtCore.QSize(1028, 542))
+        MainWindow.setFixedSize(QtCore.QSize(908, 465))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         MainWindow.setFont(font)
@@ -43,7 +35,7 @@ class Ui_MainWindow(object):
         self.gridLayout.setSpacing(4)
         self.gridLayout.setObjectName("gridLayout")
         self.in_categories = QtWidgets.QTabWidget(self.centralwidget)
-        self.in_categories.setGeometry(QtCore.QRect(24, 20, 473, 437))
+        self.in_categories.setGeometry(QtCore.QRect(28, 32, 412, 412))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -59,7 +51,7 @@ class Ui_MainWindow(object):
 "    padding-bottom: 4px;\n"
 "    border-top-left-radius: 4px;\n"
 "    border-top-right-radius: 4px;\n"
-"    width: 157;\n"
+"    width: 205;\n"
 "}\n"
 "QTabWidget::tab-bar {\n"
 "    border-top: 2px solid #C2C7CB;\n"
@@ -75,9 +67,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QTabBar::tab:!selected {\n"
-"  \n"
 "    background: #ffffff;\n"
 "}\n"
+"\n"
 "QTabWidget::pane{}\n"
 "QTabBar::tab.rf2013{\n"
 "    border-top-left-radius: 30px;\n"
@@ -95,7 +87,7 @@ class Ui_MainWindow(object):
         self.rf_in.setStyleSheet("QTabWidget::pane {}")
         self.rf_in.setObjectName("rf_in")
         self.frame = QtWidgets.QFrame(self.rf_in)
-        self.frame.setGeometry(QtCore.QRect(0, 4, 477, 397))
+        self.frame.setGeometry(QtCore.QRect(0, 4, 412, 364))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -112,7 +104,7 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.groupBox = QtWidgets.QGroupBox(self.frame)
-        self.groupBox.setGeometry(QtCore.QRect(92, 72, 109, 49))
+        self.groupBox.setGeometry(QtCore.QRect(43, 51, 125, 57))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -137,7 +129,7 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.in_rf_category = QtWidgets.QComboBox(self.groupBox)
         self.in_rf_category.setEnabled(True)
-        self.in_rf_category.setGeometry(QtCore.QRect(4, 16, 101, 25))
+        self.in_rf_category.setGeometry(QtCore.QRect(4, 16, 117, 33))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -174,66 +166,50 @@ class Ui_MainWindow(object):
         self.in_rf_category.addItem("")
         self.in_rf_category.addItem("")
         self.in_rf_category.addItem("")
-        self.in_rf_que_1_box = QtWidgets.QGroupBox(self.frame)
-        self.in_rf_que_1_box.setGeometry(QtCore.QRect(92, 160, 249, 49))
+        self.in_rf_stars = QtWidgets.QTabWidget(self.frame)
+        self.in_rf_stars.setEnabled(True)
+        self.in_rf_stars.setGeometry(QtCore.QRect(215, 70, 159, 33))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_rf_que_1_box.sizePolicy().hasHeightForWidth())
-        self.in_rf_que_1_box.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Medium")
-        font.setPointSize(10)
-        self.in_rf_que_1_box.setFont(font)
-        self.in_rf_que_1_box.setStyleSheet("QGroupBox {\n"
-"    background-color: #ffffff;\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"    margin-top: 2ex; /* leave space at the top for the title */\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top left; /* position at the top center */\n"
-"    padding: 0 3px;\n"
-"\n"
-"}")
-        self.in_rf_que_1_box.setObjectName("in_rf_que_1_box")
-        self.in_rf_que_1 = QtWidgets.QComboBox(self.in_rf_que_1_box)
-        self.in_rf_que_1.setGeometry(QtCore.QRect(4, 16, 241, 25))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_rf_que_1.sizePolicy().hasHeightForWidth())
-        self.in_rf_que_1.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.in_rf_stars.sizePolicy().hasHeightForWidth())
+        self.in_rf_stars.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto Light")
-        font.setPointSize(11)
-        self.in_rf_que_1.setFont(font)
-        self.in_rf_que_1.setStyleSheet("QComboBox {\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
+        font.setPointSize(10)
+        self.in_rf_stars.setFont(font)
+        self.in_rf_stars.setStyleSheet("QTabBar::tab {\n"
+"    border: 2px solid #C4C4C3;\n"
+"    border-bottom-color: #C2C7CB; /* same as the pane color */\n"
+"    border-radius: 4px;\n"
+"    min-width: 8ex;\n"
+"    padding: 2px;\n"
+"    width: 40;\n"
+"    margin: 2;\n"
 "}\n"
 "\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    border-width:0;\n"
+"\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border: 2px solid gray;\n"
+"    \n"
+"}\n"
+"\n"
+"QTabBar::tab:!selected {\n"
+"    margin-top: 2px; /* make non-selected tabs look smaller */\n"
 "}")
-        self.in_rf_que_1.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
-        self.in_rf_que_1.setEditable(False)
-        self.in_rf_que_1.setObjectName("in_rf_que_1")
-        self.in_rf_que_1.addItem("")
-        self.in_rf_que_1.setItemText(0, "")
-        self.in_rf_que_1.addItem("")
-        self.in_rf_que_1.addItem("")
-        self.in_rf_que_1.addItem("")
-        self.in_rf_que_1.addItem("")
-        self.in_rf_que_1.addItem("")
+        self.in_rf_stars.setObjectName("in_rf_stars")
+        self.in_rf_stars_onetab = QtWidgets.QWidget()
+        self.in_rf_stars_onetab.setObjectName("in_rf_stars_onetab")
+        self.in_rf_stars.addTab(self.in_rf_stars_onetab, "")
+        self.in_rf_stars_nonetab = QtWidgets.QWidget()
+        self.in_rf_stars_nonetab.setObjectName("in_rf_stars_nonetab")
+        self.in_rf_stars.addTab(self.in_rf_stars_nonetab, "")
+        self.in_rf_stars_twotab = QtWidgets.QWidget()
+        self.in_rf_stars_twotab.setObjectName("in_rf_stars_twotab")
+        self.in_rf_stars.addTab(self.in_rf_stars_twotab, "")
         self.in_rf_que_2_box = QtWidgets.QGroupBox(self.frame)
-        self.in_rf_que_2_box.setGeometry(QtCore.QRect(92, 232, 249, 49))
+        self.in_rf_que_2_box.setGeometry(QtCore.QRect(76, 251, 249, 69))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -257,7 +233,7 @@ class Ui_MainWindow(object):
 "}")
         self.in_rf_que_2_box.setObjectName("in_rf_que_2_box")
         self.in_rf_que_2 = QtWidgets.QComboBox(self.in_rf_que_2_box)
-        self.in_rf_que_2.setGeometry(QtCore.QRect(4, 16, 241, 25))
+        self.in_rf_que_2.setGeometry(QtCore.QRect(4, 16, 241, 45))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -290,54 +266,70 @@ class Ui_MainWindow(object):
         self.in_rf_que_2.addItem("")
         self.in_rf_que_2.addItem("")
         self.in_rf_que_2.addItem("")
-        self.in_rf_stars = QtWidgets.QTabWidget(self.frame)
-        self.in_rf_stars.setEnabled(True)
-        self.in_rf_stars.setGeometry(QtCore.QRect(240, 88, 162, 33))
+        self.in_rf_que_1_box = QtWidgets.QGroupBox(self.frame)
+        self.in_rf_que_1_box.setGeometry(QtCore.QRect(76, 148, 249, 69))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_rf_stars.sizePolicy().hasHeightForWidth())
-        self.in_rf_stars.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.in_rf_que_1_box.sizePolicy().hasHeightForWidth())
+        self.in_rf_que_1_box.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Roboto Medium")
+        font.setPointSize(10)
+        self.in_rf_que_1_box.setFont(font)
+        self.in_rf_que_1_box.setStyleSheet("QGroupBox {\n"
+"    background-color: #ffffff;\n"
+"    border: 2px solid gray;\n"
+"    border-radius: 5px;\n"
+"    margin-top: 2ex; /* leave space at the top for the title */\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    subcontrol-position: top left; /* position at the top center */\n"
+"    padding: 0 3px;\n"
+"\n"
+"}")
+        self.in_rf_que_1_box.setObjectName("in_rf_que_1_box")
+        self.in_rf_que_1 = QtWidgets.QComboBox(self.in_rf_que_1_box)
+        self.in_rf_que_1.setGeometry(QtCore.QRect(4, 16, 241, 45))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.in_rf_que_1.sizePolicy().hasHeightForWidth())
+        self.in_rf_que_1.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Roboto Light")
-        font.setPointSize(10)
-        self.in_rf_stars.setFont(font)
-        self.in_rf_stars.setStyleSheet("QTabBar::tab {\n"
-"    border: 2px solid #C4C4C3;\n"
-"    border-bottom-color: #C2C7CB; /* same as the pane color */\n"
-"    border-radius: 4px;\n"
-"    min-width: 8ex;\n"
-"    padding: 2px;\n"
-"    width: 40;\n"
-"    margin: 2;\n"
+        font.setPointSize(11)
+        self.in_rf_que_1.setFont(font)
+        self.in_rf_que_1.setStyleSheet("QComboBox {\n"
+"    border: 0;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 6em;\n"
 "}\n"
 "\n"
-"\n"
-"\n"
-"QTabBar::tab:selected {\n"
-"    border: 2px solid gray;\n"
-"    \n"
-"}\n"
-"\n"
-"QTabBar::tab:!selected {\n"
-"    margin-top: 2px; /* make non-selected tabs look smaller */\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    border-width:0;\n"
 "}")
-        self.in_rf_stars.setObjectName("in_rf_stars")
-        self.in_rf_stars_nonetab = QtWidgets.QWidget()
-        self.in_rf_stars_nonetab.setObjectName("in_rf_stars_nonetab")
-        self.in_rf_stars.addTab(self.in_rf_stars_nonetab, "")
-        self.in_rf_stars_onetab = QtWidgets.QWidget()
-        self.in_rf_stars_onetab.setObjectName("in_rf_stars_onetab")
-        self.in_rf_stars.addTab(self.in_rf_stars_onetab, "")
-        self.in_rf_stars_twotab = QtWidgets.QWidget()
-        self.in_rf_stars_twotab.setObjectName("in_rf_stars_twotab")
-        self.in_rf_stars.addTab(self.in_rf_stars_twotab, "")
+        self.in_rf_que_1.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
+        self.in_rf_que_1.setEditable(False)
+        self.in_rf_que_1.setObjectName("in_rf_que_1")
+        self.in_rf_que_1.addItem("")
+        self.in_rf_que_1.setItemText(0, "")
+        self.in_rf_que_1.addItem("")
+        self.in_rf_que_1.addItem("")
+        self.in_rf_que_1.addItem("")
+        self.in_rf_que_1.addItem("")
+        self.in_rf_que_1.addItem("")
         self.in_categories.addTab(self.rf_in, "РФ-2013")
         self.rk_in = QtWidgets.QWidget()
         self.rk_in.setStyleSheet("")
         self.rk_in.setObjectName("rk_in")
         self.frame_2 = QtWidgets.QFrame(self.rk_in)
-        self.frame_2.setGeometry(QtCore.QRect(-1, 4, 473, 397))
+        self.frame_2.setGeometry(QtCore.QRect(0, 4, 412, 364))
         self.frame_2.setStyleSheet("Background-color: #ffffff;\n"
 "border-bottom-right-radius: 30px;\n"
 "border-bottom-left-radius: 30px;")
@@ -345,7 +337,7 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.groupBox_4 = QtWidgets.QGroupBox(self.frame_2)
-        self.groupBox_4.setGeometry(QtCore.QRect(80, 88, 69, 45))
+        self.groupBox_4.setGeometry(QtCore.QRect(40, 80, 69, 45))
         font = QtGui.QFont()
         font.setFamily("Roboto Medium")
         font.setPointSize(10)
@@ -391,7 +383,7 @@ class Ui_MainWindow(object):
         self.in_rk_e.addItem("")
         self.in_rk_e.addItem("")
         self.groupBox_5 = QtWidgets.QGroupBox(self.frame_2)
-        self.groupBox_5.setGeometry(QtCore.QRect(196, 88, 69, 45))
+        self.groupBox_5.setGeometry(QtCore.QRect(172, 80, 69, 45))
         font = QtGui.QFont()
         font.setFamily("Roboto Medium")
         font.setPointSize(10)
@@ -442,7 +434,7 @@ class Ui_MainWindow(object):
         self.in_rk_f.addItem("")
         self.in_rk_f.addItem("")
         self.groupBox_6 = QtWidgets.QGroupBox(self.frame_2)
-        self.groupBox_6.setGeometry(QtCore.QRect(320, 88, 69, 45))
+        self.groupBox_6.setGeometry(QtCore.QRect(302, 80, 69, 45))
         font = QtGui.QFont()
         font.setFamily("Roboto Medium")
         font.setPointSize(10)
@@ -486,7 +478,7 @@ class Ui_MainWindow(object):
         self.in_rk_g.addItem("")
         self.in_rk_g.addItem("")
         self.in_rk_que_1_box = QtWidgets.QGroupBox(self.frame_2)
-        self.in_rk_que_1_box.setGeometry(QtCore.QRect(124, 152, 249, 49))
+        self.in_rk_que_1_box.setGeometry(QtCore.QRect(82, 192, 249, 57))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -510,7 +502,7 @@ class Ui_MainWindow(object):
 "}")
         self.in_rk_que_1_box.setObjectName("in_rk_que_1_box")
         self.in_rk_que_1 = QtWidgets.QComboBox(self.in_rk_que_1_box)
-        self.in_rk_que_1.setGeometry(QtCore.QRect(4, 16, 241, 25))
+        self.in_rk_que_1.setGeometry(QtCore.QRect(4, 20, 241, 21))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -541,7 +533,7 @@ class Ui_MainWindow(object):
         self.in_rk_que_1.addItem("")
         self.in_rk_que_1.addItem("")
         self.in_rk_que_2_box = QtWidgets.QGroupBox(self.frame_2)
-        self.in_rk_que_2_box.setGeometry(QtCore.QRect(124, 220, 249, 49))
+        self.in_rk_que_2_box.setGeometry(QtCore.QRect(82, 192, 249, 57))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -565,7 +557,7 @@ class Ui_MainWindow(object):
 "}")
         self.in_rk_que_2_box.setObjectName("in_rk_que_2_box")
         self.in_rk_que_2 = QtWidgets.QComboBox(self.in_rk_que_2_box)
-        self.in_rk_que_2.setGeometry(QtCore.QRect(12, 20, 229, 25))
+        self.in_rk_que_2.setGeometry(QtCore.QRect(4, 20, 241, 21))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -597,304 +589,8 @@ class Ui_MainWindow(object):
         self.in_rk_que_2.addItem("")
         self.in_rk_que_2.addItem("")
         self.in_categories.addTab(self.rk_in, "")
-        self.prms_in = QtWidgets.QWidget()
-        self.prms_in.setObjectName("prms_in")
-        self.frame_3 = QtWidgets.QFrame(self.prms_in)
-        self.frame_3.setGeometry(QtCore.QRect(0, 4, 473, 397))
-        self.frame_3.setStyleSheet("Background-color: #ffffff;\n"
-"border-bottom-right-radius: 30px;\n"
-"border-bottom-left-radius: 30px;")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.groupBox_9 = QtWidgets.QGroupBox(self.frame_3)
-        self.groupBox_9.setGeometry(QtCore.QRect(116, 32, 249, 49))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_9.sizePolicy().hasHeightForWidth())
-        self.groupBox_9.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Medium")
-        font.setPointSize(10)
-        self.groupBox_9.setFont(font)
-        self.groupBox_9.setStyleSheet("QGroupBox {\n"
-"    background-color: #ffffff;\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"    margin-top: 2ex; /* leave space at the top for the title */\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top left; /* position at the top center */\n"
-"    padding: 0 3px;\n"
-"}")
-        self.groupBox_9.setObjectName("groupBox_9")
-        self.in_prms_que_1 = QtWidgets.QComboBox(self.groupBox_9)
-        self.in_prms_que_1.setGeometry(QtCore.QRect(4, 16, 241, 29))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_prms_que_1.sizePolicy().hasHeightForWidth())
-        self.in_prms_que_1.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Light")
-        font.setPointSize(11)
-        self.in_prms_que_1.setFont(font)
-        self.in_prms_que_1.setStyleSheet("QComboBox {\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    border-width:0;\n"
-"}")
-        self.in_prms_que_1.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
-        self.in_prms_que_1.setEditable(False)
-        self.in_prms_que_1.setObjectName("in_prms_que_1")
-        self.in_prms_que_1.addItem("")
-        self.in_prms_que_1.setItemText(0, "")
-        self.in_prms_que_1.addItem("")
-        self.in_prms_que_1.addItem("")
-        self.in_prms_que_1.addItem("")
-        self.in_prms_que_1.addItem("")
-        self.in_prms_que_1.addItem("")
-        self.in_prms_que_1.addItem("")
-        self.in_rf_que_1_box_2 = QtWidgets.QGroupBox(self.frame_3)
-        self.in_rf_que_1_box_2.setGeometry(QtCore.QRect(116, 104, 249, 49))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_rf_que_1_box_2.sizePolicy().hasHeightForWidth())
-        self.in_rf_que_1_box_2.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Medium")
-        font.setPointSize(10)
-        self.in_rf_que_1_box_2.setFont(font)
-        self.in_rf_que_1_box_2.setStyleSheet("QGroupBox {\n"
-"    background-color: #ffffff;\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"    margin-top: 2ex; /* leave space at the top for the title */\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top left; /* position at the top center */\n"
-"    padding: 0 3px;\n"
-"\n"
-"}")
-        self.in_rf_que_1_box_2.setObjectName("in_rf_que_1_box_2")
-        self.in_prms_que_2 = QtWidgets.QComboBox(self.in_rf_que_1_box_2)
-        self.in_prms_que_2.setGeometry(QtCore.QRect(4, 16, 241, 29))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_prms_que_2.sizePolicy().hasHeightForWidth())
-        self.in_prms_que_2.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Light")
-        font.setPointSize(11)
-        self.in_prms_que_2.setFont(font)
-        self.in_prms_que_2.setStyleSheet("QComboBox {\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    border-width:0;\n"
-"}")
-        self.in_prms_que_2.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
-        self.in_prms_que_2.setEditable(False)
-        self.in_prms_que_2.setObjectName("in_prms_que_2")
-        self.in_prms_que_2.addItem("")
-        self.in_prms_que_2.setItemText(0, "")
-        self.in_prms_que_2.addItem("")
-        self.in_prms_que_2.addItem("")
-        self.in_prms_que_2.addItem("")
-        self.in_prms_que_2.addItem("")
-        self.in_prms_que_2.addItem("")
-        self.in_rf_que_2_box_2 = QtWidgets.QGroupBox(self.frame_3)
-        self.in_rf_que_2_box_2.setGeometry(QtCore.QRect(116, 172, 249, 49))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_rf_que_2_box_2.sizePolicy().hasHeightForWidth())
-        self.in_rf_que_2_box_2.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Medium")
-        font.setPointSize(10)
-        self.in_rf_que_2_box_2.setFont(font)
-        self.in_rf_que_2_box_2.setStyleSheet("QGroupBox {\n"
-"    background-color: #ffffff;\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"    margin-top: 2ex; /* leave space at the top for the title */\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top left; /* position at the top center */\n"
-"    padding: 0 3px\n"
-"}")
-        self.in_rf_que_2_box_2.setObjectName("in_rf_que_2_box_2")
-        self.in_prms_que_3 = QtWidgets.QComboBox(self.in_rf_que_2_box_2)
-        self.in_prms_que_3.setGeometry(QtCore.QRect(4, 16, 241, 29))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_prms_que_3.sizePolicy().hasHeightForWidth())
-        self.in_prms_que_3.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Light")
-        font.setPointSize(11)
-        font.setBold(False)
-        font.setWeight(50)
-        self.in_prms_que_3.setFont(font)
-        self.in_prms_que_3.setStyleSheet("QComboBox {\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    border-width:0;\n"
-"}")
-        self.in_prms_que_3.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
-        self.in_prms_que_3.setEditable(False)
-        self.in_prms_que_3.setObjectName("in_prms_que_3")
-        self.in_prms_que_3.addItem("")
-        self.in_prms_que_3.setItemText(0, "")
-        self.in_prms_que_3.addItem("")
-        self.in_prms_que_3.addItem("")
-        self.in_prms_que_3.addItem("")
-        self.in_prms_que_3.addItem("")
-        self.groupBox_10 = QtWidgets.QGroupBox(self.frame_3)
-        self.groupBox_10.setGeometry(QtCore.QRect(116, 236, 249, 49))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_10.sizePolicy().hasHeightForWidth())
-        self.groupBox_10.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Medium")
-        font.setPointSize(10)
-        self.groupBox_10.setFont(font)
-        self.groupBox_10.setStyleSheet("QGroupBox {\n"
-"    background-color: #ffffff;\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"    margin-top: 2ex; /* leave space at the top for the title */\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top left; /* position at the top center */\n"
-"    padding: 0 3px;\n"
-"}")
-        self.groupBox_10.setObjectName("groupBox_10")
-        self.in_prms_que_4 = QtWidgets.QComboBox(self.groupBox_10)
-        self.in_prms_que_4.setGeometry(QtCore.QRect(4, 16, 241, 29))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_prms_que_4.sizePolicy().hasHeightForWidth())
-        self.in_prms_que_4.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Light")
-        font.setPointSize(11)
-        self.in_prms_que_4.setFont(font)
-        self.in_prms_que_4.setStyleSheet("QComboBox {\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    border-width:0;\n"
-"}")
-        self.in_prms_que_4.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
-        self.in_prms_que_4.setEditable(False)
-        self.in_prms_que_4.setObjectName("in_prms_que_4")
-        self.in_prms_que_4.addItem("")
-        self.in_prms_que_4.setItemText(0, "")
-        self.in_prms_que_4.addItem("")
-        self.in_prms_que_4.addItem("")
-        self.in_prms_que_4.addItem("")
-        self.groupBox_11 = QtWidgets.QGroupBox(self.frame_3)
-        self.groupBox_11.setGeometry(QtCore.QRect(116, 304, 249, 49))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_11.sizePolicy().hasHeightForWidth())
-        self.groupBox_11.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Medium")
-        font.setPointSize(10)
-        self.groupBox_11.setFont(font)
-        self.groupBox_11.setStyleSheet("QGroupBox {\n"
-"    background-color: #ffffff;\n"
-"    border: 2px solid gray;\n"
-"    border-radius: 5px;\n"
-"    margin-top: 2ex; /* leave space at the top for the title */\n"
-"}\n"
-"\n"
-"QGroupBox::title {\n"
-"    subcontrol-origin: margin;\n"
-"    subcontrol-position: top left; /* position at the top center */\n"
-"    padding: 0 3px;\n"
-"}")
-        self.groupBox_11.setObjectName("groupBox_11")
-        self.in_prms_que_5 = QtWidgets.QComboBox(self.groupBox_11)
-        self.in_prms_que_5.setGeometry(QtCore.QRect(4, 16, 241, 29))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.in_prms_que_5.sizePolicy().hasHeightForWidth())
-        self.in_prms_que_5.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Roboto Light")
-        font.setPointSize(11)
-        self.in_prms_que_5.setFont(font)
-        self.in_prms_que_5.setStyleSheet("QComboBox {\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"    padding: 1px 18px 1px 3px;\n"
-"    min-width: 6em;\n"
-"}\n"
-"\n"
-"QComboBox::drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    border-width:0;\n"
-"}")
-        self.in_prms_que_5.setInputMethodHints(QtCore.Qt.ImhLowercaseOnly)
-        self.in_prms_que_5.setEditable(False)
-        self.in_prms_que_5.setObjectName("in_prms_que_5")
-        self.in_prms_que_5.addItem("")
-        self.in_prms_que_5.setItemText(0, "")
-        self.in_prms_que_5.addItem("")
-        self.in_prms_que_5.addItem("")
-        self.in_prms_que_5.addItem("")
-        self.in_prms_que_5.addItem("")
-        self.in_categories.addTab(self.prms_in, "")
         self.out_categories = QtWidgets.QTabWidget(self.centralwidget)
-        self.out_categories.setGeometry(QtCore.QRect(524, 20, 476, 456))
+        self.out_categories.setGeometry(QtCore.QRect(472, 32, 412, 412))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -910,7 +606,7 @@ class Ui_MainWindow(object):
 "    padding-bottom: 4px;\n"
 "    border-top-left-radius: 4px;\n"
 "    border-top-right-radius: 4px;\n"
-"    width: 157;\n"
+"    width: 136;\n"
 "}\n"
 "QTabWidget::tab-bar {\n"
 "    border-top: 2px solid #C2C7CB;\n"
@@ -946,7 +642,7 @@ class Ui_MainWindow(object):
         self.rf_out.setStyleSheet("QTabWidget::pane {}")
         self.rf_out.setObjectName("rf_out")
         self.frame_4 = QtWidgets.QFrame(self.rf_out)
-        self.frame_4.setGeometry(QtCore.QRect(-4, 4, 477, 397))
+        self.frame_4.setGeometry(QtCore.QRect(0, 4, 412, 364))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -959,7 +655,7 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.frame_4)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(44, 116, 389, 129))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(16, 96, 381, 129))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1033,7 +729,7 @@ class Ui_MainWindow(object):
         self.rk_out.setStyleSheet("")
         self.rk_out.setObjectName("rk_out")
         self.frame_5 = QtWidgets.QFrame(self.rk_out)
-        self.frame_5.setGeometry(QtCore.QRect(0, 4, 473, 397))
+        self.frame_5.setGeometry(QtCore.QRect(0, 4, 412, 364))
         self.frame_5.setStyleSheet("Background-color: #ffffff;\n"
 "border-bottom-right-radius: 30px;\n"
 "border-bottom-left-radius: 30px;")
@@ -1041,7 +737,7 @@ class Ui_MainWindow(object):
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.frame_5)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(44, 12, 403, 365))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(28, 16, 357, 321))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(4, 4, 4, 4)
@@ -1187,7 +883,7 @@ class Ui_MainWindow(object):
         self.prms_out = QtWidgets.QWidget()
         self.prms_out.setObjectName("prms_out")
         self.frame_6 = QtWidgets.QFrame(self.prms_out)
-        self.frame_6.setGeometry(QtCore.QRect(-4, 4, 477, 397))
+        self.frame_6.setGeometry(QtCore.QRect(0, 4, 412, 364))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1200,7 +896,7 @@ class Ui_MainWindow(object):
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
         self.verticalLayoutWidget_3 = QtWidgets.QWidget(self.frame_6)
-        self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(44, 92, 401, 189))
+        self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(24, 72, 365, 189))
         self.verticalLayoutWidget_3.setObjectName("verticalLayoutWidget_3")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
         self.verticalLayout_3.setContentsMargins(4, 4, 4, 4)
@@ -1270,6 +966,45 @@ class Ui_MainWindow(object):
         self.horizontalLayout_13.setStretch(1, 2)
         self.verticalLayout_3.addLayout(self.horizontalLayout_13)
         self.out_categories.addTab(self.prms_out, "")
+        self.info_button = QtWidgets.QPushButton(self.centralwidget)
+        self.info_button.setGeometry(QtCore.QRect(0, 0, 57, 20))
+        font = QtGui.QFont()
+        font.setFamily("Roboto Medium")
+        font.setPointSize(10)
+        self.info_button.setFont(font)
+        self.info_button.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.info_button.setStyleSheet("QPushButton:hovered{\n"
+"    background-color: red;\n"
+"}\n"
+"QPushButton#evilButton:pressed {\n"
+"    background-color: rgb(224, 0, 0);\n"
+"    border-style: inset;\n"
+"}")
+        self.info_button.setAutoDefault(False)
+        self.info_button.setFlat(True)
+        self.info_button.setObjectName("info_button")
+        self.info_panel = QtWidgets.QFrame(self.centralwidget)
+        self.info_panel.setGeometry(QtCore.QRect(0, 0, 905, 465))
+        self.info_panel.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.info_panel.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.info_panel.setObjectName("info_panel")
+        self.textBrowser = QtWidgets.QTextBrowser(self.info_panel)
+        self.textBrowser.setGeometry(QtCore.QRect(172, 48, 557, 361))
+        self.textBrowser.setStyleSheet("border-width:0")
+        self.textBrowser.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textBrowser.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.textBrowser.setObjectName("textBrowser")
+        self.pushButton = QtWidgets.QPushButton(self.info_panel)
+        self.pushButton.setGeometry(QtCore.QRect(404, 420, 75, 23))
+        font = QtGui.QFont()
+        font.setFamily("Roboto Light")
+        font.setPointSize(11)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("border-width:4")
+        self.pushButton.setAutoDefault(False)
+        self.pushButton.setDefault(False)
+        self.pushButton.setFlat(False)
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -1290,6 +1025,8 @@ class Ui_MainWindow(object):
         self.out_categories.currentChanged['int'].connect(self.out_prms_superclass.clear) # type: ignore
         self.out_categories.currentChanged['int'].connect(self.out_prms_class.clear) # type: ignore
         self.out_categories.currentChanged['int'].connect(self.out_prms_subclass.clear) # type: ignore
+        self.pushButton.clicked.connect(self.info_panel.close) # type: ignore
+        self.info_button.clicked.connect(self.info_panel.show) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1305,20 +1042,20 @@ class Ui_MainWindow(object):
         self.in_rf_category.setItemText(7, _translate("MainWindow", "Dл"))
         self.in_rf_category.setItemText(8, _translate("MainWindow", "D1"))
         self.in_rf_category.setItemText(9, _translate("MainWindow", "D2"))
+        self.in_rf_stars.setTabText(self.in_rf_stars.indexOf(self.in_rf_stars_onetab), _translate("MainWindow", "*"))
+        self.in_rf_stars.setTabText(self.in_rf_stars.indexOf(self.in_rf_stars_nonetab), _translate("MainWindow", "none"))
+        self.in_rf_stars.setTabText(self.in_rf_stars.indexOf(self.in_rf_stars_twotab), _translate("MainWindow", "**"))
+        self.in_rf_que_2_box.setTitle(_translate("MainWindow", "Стадия освоения"))
+        self.in_rf_que_2.setItemText(1, _translate("MainWindow", "Проект на утверждении"))
+        self.in_rf_que_2.setItemText(2, _translate("MainWindow", "Проектирование ведётся"))
+        self.in_rf_que_2.setItemText(3, _translate("MainWindow", "Проектирование задержано"))
+        self.in_rf_que_2.setItemText(4, _translate("MainWindow", "Проектирование не планируется"))
         self.in_rf_que_1_box.setTitle(_translate("MainWindow", "Экономическая рентабельность"))
         self.in_rf_que_1.setItemText(1, _translate("MainWindow", "Рентабельны"))
         self.in_rf_que_1.setItemText(2, _translate("MainWindow", "Рентабельны в перспективе"))
         self.in_rf_que_1.setItemText(3, _translate("MainWindow", "Рентабельность не известна"))
         self.in_rf_que_1.setItemText(4, _translate("MainWindow", "Не рентабельны"))
         self.in_rf_que_1.setItemText(5, _translate("MainWindow", "Добываются в убыток"))
-        self.in_rf_que_2_box.setTitle(_translate("MainWindow", "Стадия освоения"))
-        self.in_rf_que_2.setItemText(1, _translate("MainWindow", "Проект на утверждении"))
-        self.in_rf_que_2.setItemText(2, _translate("MainWindow", "Проектирование ведётся"))
-        self.in_rf_que_2.setItemText(3, _translate("MainWindow", "Проектирование задержано"))
-        self.in_rf_que_2.setItemText(4, _translate("MainWindow", "Проектирование не планируется"))
-        self.in_rf_stars.setTabText(self.in_rf_stars.indexOf(self.in_rf_stars_nonetab), _translate("MainWindow", "none"))
-        self.in_rf_stars.setTabText(self.in_rf_stars.indexOf(self.in_rf_stars_onetab), _translate("MainWindow", "*"))
-        self.in_rf_stars.setTabText(self.in_rf_stars.indexOf(self.in_rf_stars_twotab), _translate("MainWindow", "**"))
         self.groupBox_4.setTitle(_translate("MainWindow", "E"))
         self.in_rk_e.setItemText(1, _translate("MainWindow", "1.1"))
         self.in_rk_e.setItemText(2, _translate("MainWindow", "1.2"))
@@ -1350,34 +1087,6 @@ class Ui_MainWindow(object):
         self.in_rk_que_2.setItemText(3, _translate("MainWindow", "Плей нефтеносного района"))
         self.in_rk_que_2.setItemText(4, _translate("MainWindow", "Плей неизученного района"))
         self.in_categories.setTabText(self.in_categories.indexOf(self.rk_in), _translate("MainWindow", "РКООН"))
-        self.groupBox_9.setTitle(_translate("MainWindow", "Подкласс"))
-        self.in_prms_que_1.setItemText(1, _translate("MainWindow", "Нет уточнений"))
-        self.in_prms_que_1.setItemText(2, _translate("MainWindow", "Рентабельны"))
-        self.in_prms_que_1.setItemText(3, _translate("MainWindow", "Рентабельны в перспективе"))
-        self.in_prms_que_1.setItemText(4, _translate("MainWindow", "Рентабельность не известна"))
-        self.in_prms_que_1.setItemText(5, _translate("MainWindow", "Не рентабельны"))
-        self.in_prms_que_1.setItemText(6, _translate("MainWindow", "Добываются в убыток"))
-        self.in_rf_que_1_box_2.setTitle(_translate("MainWindow", "Экономическая рентабельность"))
-        self.in_prms_que_2.setItemText(1, _translate("MainWindow", "Рентабельны"))
-        self.in_prms_que_2.setItemText(2, _translate("MainWindow", "Рентабельны в перспективе"))
-        self.in_prms_que_2.setItemText(3, _translate("MainWindow", "Рентабельность не известна"))
-        self.in_prms_que_2.setItemText(4, _translate("MainWindow", "Не рентабельны"))
-        self.in_prms_que_2.setItemText(5, _translate("MainWindow", "Добываются в убыток"))
-        self.in_rf_que_2_box_2.setTitle(_translate("MainWindow", "Стадия освоения"))
-        self.in_prms_que_3.setItemText(1, _translate("MainWindow", "Проект на утверждении"))
-        self.in_prms_que_3.setItemText(2, _translate("MainWindow", "Проектирование ведётся"))
-        self.in_prms_que_3.setItemText(3, _translate("MainWindow", "Проектирование задержано"))
-        self.in_prms_que_3.setItemText(4, _translate("MainWindow", "Проектирование не планируется"))
-        self.groupBox_10.setTitle(_translate("MainWindow", "Определение"))
-        self.in_prms_que_4.setItemText(1, _translate("MainWindow", "Эксплуатируются"))
-        self.in_prms_que_4.setItemText(2, _translate("MainWindow", "Разрабатываются"))
-        self.in_prms_que_4.setItemText(3, _translate("MainWindow", "Только разведаны"))
-        self.groupBox_11.setTitle(_translate("MainWindow", "Определение"))
-        self.in_prms_que_5.setItemText(1, _translate("MainWindow", "Частично изучены"))
-        self.in_prms_que_5.setItemText(2, _translate("MainWindow", "Только локализованы"))
-        self.in_prms_que_5.setItemText(3, _translate("MainWindow", "Плей нефтеносного района"))
-        self.in_prms_que_5.setItemText(4, _translate("MainWindow", "Плей неизученного района"))
-        self.in_categories.setTabText(self.in_categories.indexOf(self.prms_in), _translate("MainWindow", "PRMS"))
         self.label_18.setText(_translate("MainWindow", "Категория:"))
         self.label_17.setText(_translate("MainWindow", "Рентабельность:"))
         self.label.setText(_translate("MainWindow", "Надкласс"))
@@ -1391,6 +1100,18 @@ class Ui_MainWindow(object):
         self.label_23.setText(_translate("MainWindow", "Класс:"))
         self.label_25.setText(_translate("MainWindow", "Подкласс:"))
         self.out_categories.setTabText(self.out_categories.indexOf(self.prms_out), _translate("MainWindow", "PRMS"))
+        self.info_button.setText(_translate("MainWindow", "INFO"))
+        self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Вы можете переводить категории и соответствующие им количества нефти РКООН в РФ-2013. Для этого следуйте инструкциям: </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">1. Введите категорию путём выбора осей EFG </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">2. Если программа предложила выбрать уточнение выберете из списка наиболее близко описывающее данные объёмы углеводородов. </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">3. Укажите количество углеводородов без указания единиц измерения. </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">4. Если вы хотите ввести ещё категорию то вы можете это сделать в нижеследующем окошке. </span></p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Примечание:</span><span style=\" font-size:12pt;\"> Если программа выдаёт ошибку «нестандартная категория», то вы ввели комбинацию EFG, которая является нестандартной и не переводится согласно связующему документу ООН, или вы ввели уточнение, которое не может соотноситься с данной категорией. На данный момент программа находится в стадии разработки о всех ошибках сообщайте на почту официальную почту разработчиков artem.vasin.55@inbox.ru.</span></p></body></html>"))
+        self.pushButton.setText(_translate("MainWindow", "OK"))
 
 
 if __name__ == "__main__":

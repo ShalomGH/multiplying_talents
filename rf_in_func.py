@@ -1,11 +1,11 @@
 # Функции связанные с обработкой ввода и переводом из классификации РФ-2013
 from keys_rf_rk import keys_rf_to_rk
-from out_func import rk_out_cleaning
+from out_func import out_cleaning
 
 
 # обработчик вводных данных рф-2013
 def rf_handler(self, element):
-    rk_out_cleaning(self)
+    out_cleaning(self)
     rf_letter = self.ui.in_rf_category.currentIndex()
     rf_stars = self.ui.in_rf_stars.currentIndex()
     que_1 = self.ui.in_rf_que_1.currentIndex()
@@ -101,17 +101,20 @@ def rf_handler(self, element):
 
 
 def rf_rk_translator(self):
-    rf_letter = self.ui.in_rf_category.currentIndex()
-    rf_stars = self.ui.in_rf_stars.currentIndex()
-    que_1 = self.ui.in_rf_que_1.currentIndex()
-    que_2 = self.ui.in_rf_que_2.currentIndex()
-    cat = str(rf_letter) + " " + str(rf_stars) + " " + str(que_1) + " " + str(que_2)
-    print(cat)
-    if keys_rf_to_rk.get(cat):
-        print("true")
-        self.ui.out_rk_superclass.setText(keys_rf_to_rk[cat][0])
-        self.ui.out_rk_class.setText(keys_rf_to_rk[cat][1])
-        self.ui.out_rk_subclass.setText(keys_rf_to_rk[cat][2])
-        self.ui.out_rk_e_num.setText(keys_rf_to_rk[cat][3])
-        self.ui.out_rk_f_num.setText(keys_rf_to_rk[cat][4])
-        self.ui.out_rk_g_num.setText(keys_rf_to_rk[cat][5])
+    in_index = self.ui.in_categories.currentIndex()
+    out_index = self.ui.out_categories.currentIndex()
+    if in_index == 0 and out_index == 1:
+        rf_letter = self.ui.in_rf_category.currentIndex()
+        rf_stars = self.ui.in_rf_stars.currentIndex()
+        que_1 = self.ui.in_rf_que_1.currentIndex()
+        que_2 = self.ui.in_rf_que_2.currentIndex()
+        cat = str(rf_letter) + " " + str(rf_stars) + " " + str(que_1) + " " + str(que_2)
+        print(cat)
+        if keys_rf_to_rk.get(cat):
+            print("true")
+            self.ui.out_rk_superclass.setText(keys_rf_to_rk[cat][0])
+            self.ui.out_rk_class.setText(keys_rf_to_rk[cat][1])
+            self.ui.out_rk_subclass.setText(keys_rf_to_rk[cat][2])
+            self.ui.out_rk_e_num.setText(keys_rf_to_rk[cat][3])
+            self.ui.out_rk_f_num.setText(keys_rf_to_rk[cat][4])
+            self.ui.out_rk_g_num.setText(keys_rf_to_rk[cat][5])

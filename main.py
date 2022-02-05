@@ -16,11 +16,6 @@ def clearing_input(self):
     self.ui.in_rk_g.setCurrentIndex(0)
     self.ui.in_rk_que_1.setCurrentIndex(0)
     self.ui.in_rk_que_2.setCurrentIndex(0)
-    self.ui.in_prms_que_1.setCurrentIndex(0)
-    self.ui.in_prms_que_2.setCurrentIndex(0)
-    self.ui.in_prms_que_3.setCurrentIndex(0)
-    self.ui.in_prms_que_4.setCurrentIndex(0)
-    self.ui.in_prms_que_5.setCurrentIndex(0)
 
 
 def off_visible(self):
@@ -29,27 +24,28 @@ def off_visible(self):
     self.ui.in_rf_que_2_box.setVisible(0)
     self.ui.in_rk_que_1_box.setVisible(0)
     self.ui.in_rk_que_2_box.setVisible(0)
+    self.ui.info_panel.setVisible(0)
 
 
 def tab_manager(self, num):
     off_visible(self)
     in_index = self.ui.in_categories.currentIndex()
     out_index = self.ui.out_categories.currentIndex()
+
     if num == 1 and in_index == out_index:
-        self.ui.out_categories.setCurrentIndex(self.input_tab)
-        print(1, "    global input = ", self.input_tab, "    global output = ", self.output_tab)
+        if out_index == 0:
+            self.ui.out_categories.setCurrentIndex(1)
+        if out_index == 1:
+            self.ui.out_categories.setCurrentIndex(0)
 
     if num == 2 and in_index == out_index:
-        self.ui.in_categories.setCurrentIndex(self.output_tab)
-        print(2, "    global input = ", self.input_tab, "    global output = ", self.output_tab)
-    self.input_tab = in_index
-    self.output_tab = out_index
+        if in_index == 0:
+            self.ui.in_categories.setCurrentIndex(1)
+        if in_index == 1:
+            self.ui.in_categories.setCurrentIndex(0)
 
 
 class MainWindow(QtWidgets.QMainWindow):
-    input_tab = 0
-    output_tab = 1
-
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()

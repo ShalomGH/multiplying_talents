@@ -1,15 +1,17 @@
 # Функции связанные с обработкой ввода и переводом из классификации РФ-2013
 from keys_rk_rf import keys_rk_to_rf
-from out_func import rf_out_cleaning
+from keys_rk_prms import keys_rk_to_prms
+from out_func import out_cleaning
 
 
 def rk_handler(self, element):
-    rf_out_cleaning(self)
+    out_cleaning(self)
     rk_e = self.ui.in_rk_e.currentIndex()
     rk_f = self.ui.in_rk_f.currentIndex()
     rk_g = self.ui.in_rk_g.currentIndex()
     self.ui.in_rk_que_1_box.setVisible(0)
     self.ui.in_rk_que_2_box.setVisible(0)
+
     if element not in [4, 5]:
         print(" cleaning 4 and 4")
         self.ui.in_rk_que_1.setCurrentIndex(0)
@@ -180,19 +182,44 @@ def rk_handler(self, element):
             self.ui.in_rk_que_2.setCurrentIndex(0)
             self.ui.in_rk_que_2_box.setVisible(1)
 
+    out_index = self.ui.out_categories.currentIndex()
+    if out_index == 2:
+        self.ui.in_rk_que_1_box.setVisible(0)
+        self.ui.in_rk_que_2_box.setVisible(0)
+
     rk_rf_translator(self)
+    rk_prms_translator(self)
 
 
 def rk_rf_translator(self):
-    rk_e = self.ui.in_rk_e.currentIndex()
-    rk_f = self.ui.in_rk_f.currentIndex()
-    rk_g = self.ui.in_rk_g.currentIndex()
-    rk_que_1 = self.ui.in_rk_que_1.currentIndex()
-    rk_que_2 = self.ui.in_rk_que_2.currentIndex()
-    cat = str(rk_e) + " " + str(rk_f) + " " + str(rk_g) + " " + str(rk_que_1) + " " + str(rk_que_2)
-    print(cat)
-    if keys_rk_to_rf.get(cat):
-        print("true")
-        self.ui.out_rf_category.setText(keys_rk_to_rf[cat][0])
-        self.ui.out_rf_profit.setText(keys_rk_to_rf[cat][1])
+    in_index = self.ui.in_categories.currentIndex()
+    out_index = self.ui.out_categories.currentIndex()
+    if in_index == 1 and out_index == 0:
+        rk_e = self.ui.in_rk_e.currentIndex()
+        rk_f = self.ui.in_rk_f.currentIndex()
+        rk_g = self.ui.in_rk_g.currentIndex()
+        rk_que_1 = self.ui.in_rk_que_1.currentIndex()
+        rk_que_2 = self.ui.in_rk_que_2.currentIndex()
+        cat = str(rk_e) + " " + str(rk_f) + " " + str(rk_g) + " " + str(rk_que_1) + " " + str(rk_que_2)
+        print(cat)
+        if keys_rk_to_rf.get(cat):
+            print("true")
+            self.ui.out_rf_category.setText(keys_rk_to_rf[cat][0])
+            self.ui.out_rf_profit.setText(keys_rk_to_rf[cat][1])
+
+
+def rk_prms_translator(self):
+    in_index = self.ui.in_categories.currentIndex()
+    out_index = self.ui.out_categories.currentIndex()
+    if in_index == 1 and out_index == 2:
+        rk_e = self.ui.in_rk_e.currentIndex()
+        rk_f = self.ui.in_rk_f.currentIndex()
+        rk_g = self.ui.in_rk_g.currentIndex()
+        cat = str(rk_e) + " " + str(rk_f) + " " + str(rk_g)
+        print(cat)
+        if keys_rk_to_prms.get(cat):
+            print("true")
+            self.ui.out_prms_superclass.setText(keys_rk_to_prms[cat][0])
+            self.ui.out_prms_class.setText(keys_rk_to_prms[cat][1])
+            self.ui.out_prms_subclass.setText(keys_rk_to_prms[cat][2])
 

@@ -2251,7 +2251,7 @@ border-bottom-left-radius: 30px;</string>
          <number>0</number>
         </property>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,2">
           <item>
            <widget class="QLabel" name="label_21">
             <property name="font">
@@ -2281,7 +2281,7 @@ border-bottom-left-radius: 30px;</string>
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,2">
           <item>
            <widget class="QLabel" name="label_23">
             <property name="font">
@@ -2311,7 +2311,7 @@ border-bottom-left-radius: 30px;</string>
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,2">
           <item>
            <widget class="QLabel" name="label_25">
             <property name="font">

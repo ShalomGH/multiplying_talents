@@ -50,6 +50,7 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
         off_visible(self)
         self.ui.in_categories.currentChanged.connect(lambda: clearing_input(self))
         self.input_tab = 0
@@ -74,5 +75,4 @@ class MainWindow(QtWidgets.QMainWindow):
 app = QtWidgets.QApplication([])
 application = MainWindow()
 application.show()
-
 sys.exit(app.exec())

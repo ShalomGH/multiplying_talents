@@ -41,7 +41,6 @@ def rf_handler(self, element):
         if rf_stars == 1:
             self.ui.in_rf_que_2_box.setVisible(0)
             if element not in [3, 4]:
-                print("element not in [3, 4]")
                 self.ui.in_rf_que_2_box.setVisible(0)
                 self.ui.in_rf_que_1.clear()
                 self.ui.in_rf_que_1.addItems([" ", "Рентабельны", "Рентабельны в перспективе"])
@@ -89,7 +88,12 @@ def rf_handler(self, element):
                 self.ui.in_rf_que_2.addItems([" ", "Проект ведётся"])
                 self.ui.in_rf_que_2.setCurrentIndex(1)
 
-            if element != 4 and que_1 in [2, 3, 4]:
+            if element != 4 and que_1 == 2:
+                self.ui.in_rf_que_2.clear()
+                self.ui.in_rf_que_2.addItems([" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано"])
+                self.ui.in_rf_que_2_box.setVisible(1)
+
+            if element != 4 and que_1 in [3, 4]:
                 self.ui.in_rf_que_2.clear()
                 self.ui.in_rf_que_2.addItems(
                     [" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано",

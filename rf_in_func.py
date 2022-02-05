@@ -1,6 +1,6 @@
 # Функции связанные с обработкой ввода и переводом из классификации РФ-2013
 from keys_rf_rk import keys_rf_to_rk
-from rk_out_func import rk_out_cleaning
+from out_func import rk_out_cleaning
 
 
 # обработчик вводных данных рф-2013

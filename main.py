@@ -5,18 +5,6 @@ from rk_in_func import rk_handler
 import sys
 
 
-# def tab_manager(self, num, input_tab, output_tab):
-#     in_index = self.ui.in_categories.currentIndex()
-#     out_index = self.ui.out_categories.currentIndex()
-#     if num == 1 and in_index == out_index:
-#         self.ui.in_categories.setCurrentIndex(output_tab)
-#         input_tab = in_index
-#
-#     if num == 2 and in_index == out_index:
-#         self.ui.out_categories.setCurrentIndex(input_tab)
-#         output_tab = out_index
-
-
 # функция отчистки вводных категорий
 def clearing_input(self):
     self.ui.in_rf_category.setCurrentIndex(0)
@@ -41,6 +29,21 @@ def off_visible(self):
     self.ui.in_rf_que_2_box.setVisible(0)
     self.ui.in_rk_que_1_box.setVisible(0)
     self.ui.in_rk_que_2_box.setVisible(0)
+
+
+def tab_manager(self, num):
+    off_visible(self)
+    in_index = self.ui.in_categories.currentIndex()
+    out_index = self.ui.out_categories.currentIndex()
+    if num == 1 and in_index == out_index:
+        self.ui.out_categories.setCurrentIndex(self.input_tab)
+        print(1, "    global input = ", self.input_tab, "    global output = ", self.output_tab)
+
+    if num == 2 and in_index == out_index:
+        self.ui.in_categories.setCurrentIndex(self.output_tab)
+        print(2, "    global input = ", self.input_tab, "    global output = ", self.output_tab)
+    self.input_tab = in_index
+    self.output_tab = out_index
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -70,20 +73,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.in_rk_g.activated.connect(lambda: rk_handler(self, 3))
         self.ui.in_rk_que_1.activated.connect(lambda: rk_handler(self, 4))
         self.ui.in_rk_que_2.activated.connect(lambda: rk_handler(self, 5))
-
-
-def tab_manager(self, num):
-    in_index = self.ui.in_categories.currentIndex()
-    out_index = self.ui.out_categories.currentIndex()
-    if num == 1 and in_index == out_index:
-        self.ui.out_categories.setCurrentIndex(self.input_tab)
-        print(1, "    global input = ", self.input_tab, "    global output = ", self.output_tab)
-
-    if num == 2 and in_index == out_index:
-        self.ui.in_categories.setCurrentIndex(self.output_tab)
-        print(2, "    global input = ", self.input_tab, "    global output = ", self.output_tab)
-    self.input_tab = in_index
-    self.output_tab = out_index
 
 
 app = QtWidgets.QApplication([])

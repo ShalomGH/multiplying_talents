@@ -34,16 +34,16 @@ def rk_handler(self, element):
         # F = 1.3
         if rk_f == 3 and element == 2:
             self.ui.in_rk_g.clear()
-            self.ui.in_rk_g.addItems([" ", "2-3"])
+            self.ui.in_rk_g.addItems([" ", "2+3"])
             self.ui.in_rk_g.setCurrentIndex(1)
 
         # F = 2.1
         if rk_f == 4:
             if element == 2:
                 self.ui.in_rk_g.clear()
-                self.ui.in_rk_g.addItems([" ", "1", "2-3"])
+                self.ui.in_rk_g.addItems([" ", "1", "2+3"])
 
-            # G = 1 and 2-3
+            # G = 1 and 2+3
             # if element in [3, 4]:
             if element != 4:
                 self.ui.in_rk_que_1.clear()
@@ -70,7 +70,7 @@ def rk_handler(self, element):
         # F = 1.3
         if rk_f == 3 and element == 2:
             self.ui.in_rk_g.clear()
-            self.ui.in_rk_g.addItems([" ", "2-3"])
+            self.ui.in_rk_g.addItems([" ", "2+3"])
             self.ui.in_rk_g.setCurrentIndex(1)
 
 
@@ -87,7 +87,7 @@ def rk_handler(self, element):
         # F = 1.3
         if element == 2:
             self.ui.in_rk_g.clear()
-            self.ui.in_rk_g.addItems([" ", "1", "2-3"])
+            self.ui.in_rk_g.addItems([" ", "1", "2+3"])
 
         # G = 1
         if rk_g == 1 and element in [3, 4]:
@@ -96,7 +96,7 @@ def rk_handler(self, element):
                 self.ui.in_rk_que_1.addItems([" ", "Эксплуатируются", "Разрабатываются", "Только разведаны"])
             self.ui.in_rk_que_1_box.setVisible(1)
 
-        # G = 2-3
+        # G = 2+3
         if rk_g == 2 and element in [3, 4]:
             if element == 3:
                 self.ui.in_rk_que_1.clear()
@@ -116,7 +116,7 @@ def rk_handler(self, element):
         # F = 1.3; 2.1;
         if rk_f in [1, 2, 3] and element == 2:
             self.ui.in_rk_g.clear()
-            self.ui.in_rk_g.addItems([" ", "1", "2-3"])
+            self.ui.in_rk_g.addItems([" ", "1", "2+3"])
 
     # F = 3.1; 3.2
         if rk_f in [4, 5] and element == 2:
@@ -147,7 +147,7 @@ def rk_handler(self, element):
         # F = 1.3; 2.1; 2.2
         if rk_f in [1, 2, 3, 4] and element == 2:
             self.ui.in_rk_g.clear()
-            self.ui.in_rk_g.addItems([" ", "1", "2-3"])
+            self.ui.in_rk_g.addItems([" ", "1", "2+3"])
             self.ui.in_rk_g.setCurrentIndex(0)
 
     # F = 4
@@ -157,7 +157,7 @@ def rk_handler(self, element):
             self.ui.in_rk_que_2_box.setVisible(1)
         if rk_f == 5 and element == 2:
             self.ui.in_rk_g.clear()
-            self.ui.in_rk_g.addItems([" ", "1", "2-3", "4"])
+            self.ui.in_rk_g.addItems([" ", "1", "2+3", "4"])
             self.ui.in_rk_g.setCurrentIndex(0)
 
         # G = 1
@@ -167,7 +167,7 @@ def rk_handler(self, element):
             self.ui.in_rk_que_1.setCurrentIndex(0)
             self.ui.in_rk_que_1_box.setVisible(1)
 
-        # G = 2-3
+        # G = 2+3
         if rk_f == 5 and rk_g == 2 and element == 3:
             self.ui.in_rk_que_1.clear()
             self.ui.in_rk_que_1.addItems([" ", "Разрабатываются", "Только разведаны"])

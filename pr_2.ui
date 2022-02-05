@@ -360,14 +360,14 @@ QTabBar::tab:!selected {
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="in_rf_stars_onetab">
-        <attribute name="title">
-         <string>*</string>
-        </attribute>
-       </widget>
        <widget class="QWidget" name="in_rf_stars_nonetab">
         <attribute name="title">
          <string>none</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="in_rf_stars_onetab">
+        <attribute name="title">
+         <string>*</string>
         </attribute>
        </widget>
        <widget class="QWidget" name="in_rf_stars_twotab">
@@ -1832,7 +1832,7 @@ QPushButton#evilButton:pressed {
      <property name="geometry">
       <rect>
        <x>172</x>
-       <y>48</y>
+       <y>24</y>
        <width>557</width>
        <height>361</height>
       </rect>
@@ -1862,15 +1862,15 @@ p, li { white-space: pre-wrap; }
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>404</x>
-       <y>420</y>
+       <x>408</x>
+       <y>408</y>
        <width>75</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Roboto Light</family>
+       <family>Roboto</family>
        <pointsize>11</pointsize>
       </font>
      </property>

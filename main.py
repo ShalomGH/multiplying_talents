@@ -53,6 +53,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         off_visible(self)
         self.ui.in_categories.currentChanged.connect(lambda: clearing_input(self))
+        self.ui.out_categories.currentChanged.connect(lambda: clearing_input(self))
         self.input_tab = 0
         self.output_tab = 1
 

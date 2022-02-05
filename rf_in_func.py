@@ -90,7 +90,8 @@ def rf_handler(self, element):
 
             if element != 4 and que_1 == 2:
                 self.ui.in_rf_que_2.clear()
-                self.ui.in_rf_que_2.addItems([" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано"])
+                self.ui.in_rf_que_2.addItems(
+                    [" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано"])
                 self.ui.in_rf_que_2_box.setVisible(1)
 
             if element != 4 and que_1 in [3, 4]:
@@ -98,6 +99,12 @@ def rf_handler(self, element):
                 self.ui.in_rf_que_2.addItems(
                     [" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано",
                      "Проектирование не планируется"])
+                self.ui.in_rf_que_2_box.setVisible(1)
+
+            if element != 4 and que_1 == 3:
+                self.ui.in_rf_que_2.clear()
+                self.ui.in_rf_que_2.addItems(
+                    [" ", "Проектирование ведётся", "Проект на утверждении", "Проектирование задержано"])
                 self.ui.in_rf_que_2_box.setVisible(1)
 
             # С1, С2 с 2 звёздочками

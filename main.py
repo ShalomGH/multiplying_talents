@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from ui import Ui_MainWindow
 from rf_in_func import rf_handler, rf_rk_translator
 from rk_in_func import rk_handler
@@ -49,6 +49,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
+        self.setWindowTitle('dlkadkad')
         self.ui.setupUi(self)
 
         off_visible(self)
@@ -75,5 +76,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 app = QtWidgets.QApplication([])
 application = MainWindow()
+application.setWindowTitle('EG translator')
+application.setWindowIcon(QtGui.QIcon('icon.ico'))
 application.show()
 sys.exit(app.exec())
